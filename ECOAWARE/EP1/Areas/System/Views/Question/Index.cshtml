@@ -1,0 +1,56 @@
+﻿@model IEnumerable<EP1.ViewModels.QuestionViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>Questions for Survey @ViewData["SurveyId"]</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        List of Questions
+                        <a href="@Url.Action("Create", "Question", new { surveyId = ViewData["SurveyId"] })" class="btn btn-primary float-right">Add New Question</a>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover" id="dataTables-example" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    
+                                    <th>Type</th>
+                                    <th>Points</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var question in Model)
+                                {
+                                    <tr>
+                                        <td>@question.QuestionId</td>
+                                       
+                                        <td>@question.Type</td>
+                                        <td>@question.Points</td>
+                                        <td>
+                                            <a href="@Url.Action("Edit", "Question", new { surveyId = question.SurveyId, id = question.QuestionId })" class="btn btn-warning btn-sm">Edit</a>
+                                            <a href="@Url.Action("Delete", "Question", new { surveyId = question.SurveyId, id = question.QuestionId })" class="btn btn-danger btn-sm">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

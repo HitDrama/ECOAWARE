@@ -1,0 +1,48 @@
+﻿@model EP1.ViewModels.AccountViewModel
+
+@{
+    ViewData["Title"] = "Edit Account";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="FullName">Full Name</label>
+        <input type="text" class="form-control" id="FullName" name="FullName" value="@Model.FullName" required />
+    </div>
+    <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" value="@Model.Email" readonly />
+    </div>
+    <div class="form-group">
+        <label for="Class">Class</label>
+        <input type="Class" class="form-control" id="Class" name="Class" value="@Model.Class" />
+    </div>
+    <div class="form-group">
+        <label for="Specification">Specification</label>
+        <input type="Specification" class="form-control" id="Specification" name="Specification" value="@Model.Specification" />
+    </div>
+    <div class="form-group">
+        <label for="Section">Section</label>
+        <input type="Section" class="form-control" id="Section" name="Section" value="@Model.Section"  />
+    </div>
+    <div class="form-group">
+        <label for="IsActive">Status</label>
+        <select class="form-control" id="IsActive" name="IsActive">
+            <option value="true">Active</option>
+            <option value="false">Inactive</option>
+        </select>
+
+        <script>
+            document.getElementById("IsActive").value = '@Model.IsActive.ToString().ToLower()';
+        </script>
+    </div>
+    <div class="form-group">
+        <label for="Role">Role</label>
+        <input type="Role" class="form-control" id="Role" name="Role" value="@Model.Role" />
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="@Url.Action("Index", "Account", new { area = "System" })" class="btn btn-secondary">Cancel</a>
+</form>

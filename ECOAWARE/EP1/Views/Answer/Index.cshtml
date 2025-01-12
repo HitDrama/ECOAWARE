@@ -1,0 +1,112 @@
+﻿@model List<EP1.ViewModels.QuestionViewModel>
+@{
+    ViewData["Title"] = "Survey";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<h1 class="text-center mt-4" style="color: #4CAF50; font-weight: bold;">
+    <i class="fas fa-poll" style="margin-right: 10px;"></i>Survey: @ViewBag.SurveyTitle
+</h1>
+
+<form id="surveyForm" asp-action="SubmitAnswers" method="post" class="container mt-5 p-4 rounded shadow-lg" style="background: #f9f9f9;">
+    <input type="hidden" name="surveyId" value="@ViewBag.SurveyId" />
+
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <div class="question mb-5 p-4 rounded" style="background: #ffffff; border: 1px solid #ddd;">
+            <h3 class="text-primary" style="word-wrap: break-word; word-break: break-word; white-space: normal; max-width: 100%;">
+                <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
+                Question @Model[i].QuestionId: @Html.Raw(Model[i].Content.Replace("\n", "<br>"))
+            </h3>
+            <p class="text-secondary">
+                <i class="fas fa-info-circle"></i> Type:
+                <span class="badge @(Model[i].Type == EP1.Models.QuestionType.MultipleChoice ? "badge-info" : "badge-warning")">
+                    @(Model[i].Type == EP1.Models.QuestionType.MultipleChoice ? "Multiple Choice" : "Essay")
+                </span>
+            </p>
+            <p class="text-muted">
+                <i class="fas fa-star"></i> Points: <strong>@Model[i].Points</strong>
+            </p>
+
+            <input type="hidden" name="Answers[@i].QuestionId" value="@Model[i].QuestionId" />
+
+            @if (Model[i].Type == EP1.Models.QuestionType.MultipleChoice)
+            {
+                <div class="form-group mt-3 p-4 rounded" style="background-color: #e3f2fd; border: 2px solid #007BFF;">
+                    <label for="answer-question-@i" class="font-weight-bold d-flex align-items-center">
+                        <i class="fas fa-check-circle text-primary" style="margin-right: 10px;"></i>
+                        Multiple Choice (Enter one character only)
+                    </label>
+                    <input type="text"
+                           class="form-control"
+                           id="answer-question-@i"
+                           name="Answers[@i].AnswerText"
+                           placeholder="Enter your answer (e.g., A, B, C, D,...)"
+                           maxlength="1"
+                           pattern="[A-Za-z]"
+                           oninput="this.value = this.value.replace(/[^A-Za-z]/g, '').toUpperCase();"
+                           style="border: 2px solid #007BFF; padding: 10px; font-size: 16px;">
+                </div>
+            }
+            else if (Model[i].Type == EP1.Models.QuestionType.Essay)
+            {
+                <div class="form-group mt-3 p-4 rounded" style="background-color: #e8f5e9; border: 2px solid #28A745;">
+                    <label for="textarea-question-@i" class="font-weight-bold d-flex align-items-center">
+                        <i class="fas fa-pencil-alt text-success" style="margin-right: 10px;"></i>
+                        Essay (Write your detailed answer below)
+                    </label>
+                    <textarea class="form-control"
+                              id="textarea-question-@i"
+                              name="Answers[@i].AnswerText"
+                              rows="4"
+                              placeholder="Enter your answer..."
+                              style="border: 2px solid #28A745; padding: 10px; font-size: 16px;"></textarea>
+                </div>
+            }
+        </div>
+    }
+
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#confirmSubmitModal">
+            <i class="fas fa-paper-plane" style="margin-right: 10px;"></i>Submit
+        </button>
+    </div>
+</form>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="confirmSubmitModal" tabindex="-1" role="dialog" aria-labelledby="confirmSubmitLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #28a745; color: white;">
+                <h5 class="modal-title" id="confirmSubmitLabel">
+                    <i class="fas fa-exclamation-circle" style="margin-right: 10px;"></i>Confirmation
+                </h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="text-center" style="font-size: 16px; color: #333;">
+                    Are you sure you want to submit your answers?
+                    <strong>Please review your responses carefully.</strong>
+                    <br />
+                    <span class="text-danger">You can only submit this survey once, and your first submission will be recorded.</span>
+                </p>
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <i class="fas fa-times"></i> Cancel
+                </button>
+                <button type="button" class="btn btn-success" onclick="document.getElementById('surveyForm').submit();">
+                    <i class="fas fa-check"></i> Yes, Submit
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // You can add any additional interactions or animations if needed
+    </script>
+}

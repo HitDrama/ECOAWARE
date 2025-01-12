@@ -1,0 +1,165 @@
+﻿@using EP1.Models
+@model EP1.ViewModels.QuestionViewModel
+
+@{
+    ViewData["Title"] = "Edit Question";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>Edit Question</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">Edit Question Details</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Update the question information below</h5>
+                        <form asp-action="Edit" asp-route-surveyId="@Model.SurveyId" asp-route-id="@Model.QuestionId" method="post">
+                            @Html.AntiForgeryToken()
+
+                            <input type="hidden" asp-for="SurveyId" />
+                            <input type="hidden" asp-for="QuestionId" />
+
+                            <div class="mb-3 row">
+                                <label for="Content" class="col-sm-2">Content</label>
+                                <div class="col-sm-10">
+                                    <textarea asp-for="Content" class="form-control"></textarea>
+                                    <span asp-validation-for="Content" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+
+                            <div class="mb-3 row">
+                                <label for="Type" class="col-sm-2">Type</label>
+                                <div class="col-sm-10">
+                                    <select id="questionType" name="Type" class="form-control">
+                                        @if (Model.Type == QuestionType.Essay)
+                                        {
+                                            <option value="1" selected>Essay</option>
+                                            <option value="0">Multiple Choice</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="1">Essay</option>
+                                            <option value="0" selected>Multiple Choice</option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="Type" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+
+                            <div class="mb-3 row">
+                                <label for="Points" class="col-sm-2">Points</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Points" type="number" class="form-control" />
+                                    <span asp-validation-for="Points" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+
+                            <!-- Fields for Multiple Choice -->
+                            <div id="multipleChoiceFields" style="display:none;">
+                                <div class="mb-3 row">
+                                    <label for="CorrectAnswer" class="col-sm-2">Correct Answer</label>
+                                    <div class="col-sm-10">
+                                        <input asp-for="CorrectAnswer"
+                                               class="form-control"
+                                               maxlength="1"
+                                               pattern="[A-Za-z]"
+                                               oninput="this.value = this.value.replace(/[^A-Za-z]/g, '').toUpperCase();" />
+                                        <span asp-validation-for="CorrectAnswer" class="text-danger"></span>
+                                    </div>
+                                </div>
+                               @*  <div id="choicesContainer">
+                                    <h5>Choices</h5>
+                                    @if (Model.Choices != null && Model.Choices.Any())
+                                    {
+                                        @for (int i = 0; i < Model.Choices.Count; i++)
+                                        {
+                                            <div class="mb-3 row">
+                                                <label class="col-sm-2">Choice @(i + 1)</label>
+                                                <div class="col-sm-8">
+                                                    <input asp-for="Choices[@i].Content" class="form-control" />
+                                                    <span asp-validation-for="Choices[@i].Content" class="text-danger"></span>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <input type="hidden" name="Choices[@i].IsCorrect" value="false" />
+                                                    <input asp-for="Choices[@i].IsCorrect" type="checkbox" value="true" />
+                                                    Is Correct
+                                                </div>
+                                            </div>
+                                        }
+                                    }
+                                    <div class="mt-3">
+                                        <button type="button" id="addChoice" class="btn btn-secondary">Add Choice</button>
+                                    </div>
+                                </div> *@
+                            </div>
+                            <div class="line"></div>
+                            <br />
+
+                            <div class="mb-3 row">
+                                <div class="col-sm-4 offset-sm-2">
+                                    <a asp-action="Index" asp-route-surveyId="@Model.SurveyId" class="btn btn-secondary mb-2">
+                                        <i class="fas fa-times"></i> Cancel
+                                    </a>
+                                    <button type="submit" class="btn btn-primary mb-2">
+                                        <i class="fas fa-save"></i> Save Changes
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const typeDropdown = document.getElementById("questionType");
+          const multipleChoiceFields = document.getElementById("multipleChoiceFields");
+
+          function updateFormState() {
+            const selectedValue = typeDropdown.value;
+            if (selectedValue === "0") { // Multiple Choice
+              multipleChoiceFields.style.display = "block";
+            } else { // Essay
+              multipleChoiceFields.style.display = "none";
+            }
+          }
+
+          typeDropdown.addEventListener("change", updateFormState);
+          updateFormState();
+        });
+
+        const addChoiceButton = document.getElementById("addChoice");
+        const choicesContainer = document.getElementById("choicesContainer");
+
+        addChoiceButton.addEventListener("click", function () {
+          const choiceIndex = choicesContainer.querySelectorAll(".form-group").length;
+
+          const newChoice = document.createElement("div");
+          newChoice.classList.add("mb-3", "row");
+          newChoice.innerHTML = `
+            <label class="col-sm-2">Choice ${choiceIndex + 1}</label>
+            <div class="col-sm-8">
+              <input name="Choices[${choiceIndex}].Content" class="form-control" required />
+            </div>
+            <div class="col-sm-2">
+              <input name="Choices[${choiceIndex}].IsCorrect" type="checkbox" /> Is Correct
+            </div>
+          `;
+          choicesContainer.appendChild(newChoice);
+        });
+    </script>
+}
+

@@ -1,0 +1,154 @@
+﻿@{
+    ViewData["Title"] = "Blog";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<section class="blog_area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0">
+                <div class="blog_left_sidebar">
+
+                    @foreach (var blog in Model)
+                    {
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="@Url.Content($"~/images/Blog/{blog.Image}")" alt="@blog.Title" style="width: 100%; height: 300px; object-fit: cover; border-radius: 4px;">
+                                <a href="#" class="blog_item_date">
+                                    <h3>@blog.CreatedDate.ToString("dd")</h3>
+                                    <p>@blog.CreatedDate.ToString("MMM")</p>
+                                </a>
+                            </div>
+
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="@Url.Action("DetailBlog", "Web", new { id = blog.Id })">
+                                    <h2>@blog.Title</h2>
+                                </a>
+                                @{
+                                    var cleanDescription = System.Text.RegularExpressions.Regex.Replace(
+                                    blog.Description.Length > 100
+                                    ? blog.Description.Substring(0, 100) + "..."
+                                    : blog.Description,
+                                    "<.*?>",
+                                    string.Empty
+                                    );
+                                }
+                                <p style="max-width: 100%; word-wrap: break-word; white-space: normal; overflow: hidden; text-overflow: ellipsis;">
+                                    @Html.Raw(cleanDescription)
+                                </p>
+                            </div>
+                        </article>
+                    }
+                 
+
+
+                    <div class="blog-pagination justify-content-center d-flex">
+                        <ul class="pagination">
+                            @if (ViewBag.CurrentPage > 1)
+                            {
+                                <li class="page-item">
+                                    <a href="@Url.Action("Blog", new { page = ViewBag.CurrentPage - 1 })" class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                            }
+
+                            @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                            {
+                                if (i == ViewBag.CurrentPage)
+                                {
+                                    <li class="page-item active">
+                                        <a href="#" class="page-link">@i</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item">
+                                        <a href="@Url.Action("Blog", new { page = i })" class="page-link">@i</a>
+                                    </li>
+                                }
+                            }
+
+                            @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                            {
+                                <li class="page-item">
+                                    <a href="@Url.Action("Blog", new { page = ViewBag.CurrentPage + 1 })" class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <!-- Section Tittle -->
+                <div class="section-tittle mb-40">
+                    <h3>Follow Us</h3>
+                </div>
+                <!-- Follow Social Section -->
+                <div class="single-follow mb-45">
+                    <div class="single-box" style="background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <!-- Surveys -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/completed-task.png" alt="Survey" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.SurveyCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Surveys</p>
+                            </div>
+                        </div>
+
+                        <!-- Teachers -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/teacher.png" alt="Teacher Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.TeacherCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Teachers</p>
+                            </div>
+                        </div>
+
+                        <!-- Students -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/graduated.png" alt="Student Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.StudentCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Students</p>
+                            </div>
+                        </div>
+
+                        <!-- Blog -->
+                        <div class="follow-us d-flex align-items-center">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/blog.png" alt="Blog Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.BlogCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Blogs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Poster -->
+                <div class="news-poster d-none d-lg-block">
+                    <img src="~/images/Banner/Blog.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+

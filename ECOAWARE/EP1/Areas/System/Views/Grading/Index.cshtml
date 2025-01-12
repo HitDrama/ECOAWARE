@@ -1,0 +1,67 @@
+﻿@model List<EP1.ViewModels.SurveyViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>List of Completed Surveys</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        Survey List
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover" id="dataTables-example" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                 
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model != null && Model.Any())
+                                {
+                                    int index = 1;
+                                    foreach (var survey in Model)
+                                    {
+                                        <tr>
+                                            <td>@index</td>
+                                            <td>@survey.Title</td>
+                                          
+                                            <td>@survey.StartDate.ToString("dd/MM/yyyy")</td>
+                                            <td>@survey.EndDate.ToString("dd/MM/yyyy")</td>
+                                            <td>@survey.Status</td>
+                                            <td>
+                                                <a href="@Url.Action("Grade", "Grading", new { area = "System", surveyId = survey.SurveyId })"
+                                                   class="btn btn-primary btn-sm">
+                                                    Grade
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        index++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="7" class="text-center">No completed surveys found.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

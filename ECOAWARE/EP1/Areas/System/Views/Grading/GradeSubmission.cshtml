@@ -1,0 +1,94 @@
+﻿@model EP1.ViewModels.GradeSubmissionViewModel
+@{
+    ViewData["Title"] = "GradeSubmission";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>Grading Submission of @Model.UserName</h3>
+            <p>Submission Date: @Model.SubmissionDate.ToString("dd/MM/yyyy HH:mm")</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">Grading Form</div>
+                    <div class="card-body">
+                        <form asp-action="SubmitGrading" method="post">
+                            <input type="hidden" name="SubmissionId" value="@Model.SubmissionId" />
+                            <table class="table table-bordered" style="table-layout: fixed; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 5%;">#</th>
+                                        <th style="width: 30%;">Question</th>
+                                        <th style="width: 20%;">Answer</th>
+                                        <th style="width: 15%;">Maximum Points</th>
+                                        <th style="width: 15%;">Score</th>
+                                        <th style="width: 15%;">Correct/Incorrect</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @for (int i = 0; i < Model.Answers.Count; i++)
+                                    {
+                                        <tr>
+                                            <td>@(i + 1)</td>
+                                            <td style="word-wrap: break-word; word-break: break-word; white-space: pre-wrap; overflow-wrap: break-word;">
+                                                @Model.Answers[i].QuestionContent
+                                            </td>
+                                            <td style="word-wrap: break-word; word-break: break-word; white-space: pre-wrap;">
+                                                @Model.Answers[i].AnswerText
+                                            </td>
+                                            <td>@Model.Answers[i].Points</td>
+                                            <input type="hidden" name="Answers[@i].AnswerId" value="@Model.Answers[i].AnswerId" />
+                                            <td>
+                                                <input type="number" class="form-control score-input"
+                                                       name="Answers[@i].Score"
+                                                       value="@Model.Answers[i].Score"
+                                                       min="0" max="@Model.Answers[i].Points"
+                                                       style="max-width: 100%; overflow: hidden; text-overflow: ellipsis;"
+                                                @(Model.Answers[i].IsCorrect ? "" : "disabled") />
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" class="correct-checkbox"
+                                                       name="Answers[@i].IsCorrect"
+                                                       value="true" @(Model.Answers[i].IsCorrect ? "checked" : "") />
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <div class="form-check mt-3">
+                                <input type="checkbox" class="form-check-input" id="confirm" required />
+                                <label class="form-check-label" for="confirm">Confirm Grading</label>
+                            </div>
+                            <div class="mt-4">
+                                <button type="submit" class="btn btn-primary">Complete Grading</button>
+                                <a href="@Url.Action("Index", new { area = "System", surveyId = Model.SubmissionId })" class="btn btn-secondary">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.correct-checkbox').forEach((checkbox, index) => {
+                checkbox.addEventListener('change', function () {
+                    const scoreInput = document.getElementsByName(`Answers[${index}].Score`)[0];
+                    if (this.checked) {
+                        scoreInput.removeAttribute('disabled');
+                    } else {
+                        scoreInput.setAttribute('disabled', 'true');
+                        scoreInput.value = 0; // Reset score to 0 if unchecked
+                    }
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EP1.Models.FAQ>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>Danh sách FAQ</h3>
+            <a href="/System/FAQ/Add" class="btn btn-success">Thêm mới</a>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">Danh sách câu hỏi thường gặp</div>
+                    <div class="card-body">
+                        <table class="table table-hover"
+                               id="dataTables-example"
+                               width="100%">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tiêu đề</th>
+                                    
+                                    <th>Ngày tạo</th>
+                                    <th>Hình ảnh</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var faq in Model)
+                                {
+                                    <tr>
+                                        <td>@faq.Id</td>
+                                        <td>@faq.Title</td>
+                                      
+                                        <td>@faq.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                        <td>
+                                            @if (!string.IsNullOrEmpty(faq.Image))
+                                            {
+                                                <img src="/images/FAQ/@faq.Image" alt="@faq.Image" style="width: 100px; height: auto;" />
+                                            }
+                                            else
+                                            {
+                                                <span>No Image</span>
+                                            }
+                                        </td>
+                                        <td>
+                                            <a asp-action="Edit" asp-route-id="@faq.Id" class="btn btn-primary btn-sm">Edit</a>
+                                            <a asp-action="Delete" asp-route-id="@faq.Id" class="btn btn-danger btn-sm"
+                                               onclick="return confirm('Are you sure you want to delete this FAQ?');">Delete</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

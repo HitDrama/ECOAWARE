@@ -1,0 +1,31 @@
+﻿@model EP1.ViewModels.UserQuestionViewModel
+@{
+    ViewData["Title"] = "Edit Comment";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<section class="comment-edit-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h2 class="mb-4">Edit Your Comment</h2>
+                <form asp-action="EditComment" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="UserId" />
+                    <input type="hidden" asp-for="FAQId" />
+
+                    <div class="form-group">
+                        <label for="Question">Comment</label>
+                        <textarea asp-for="Question" class="form-control" rows="5"></textarea>
+                        @Html.ValidationMessageFor(model => model.Question, "", new { @class = "text-danger" })
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+                    <a href="@Url.Action("FAQ")" class="btn btn-secondary mt-3">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+

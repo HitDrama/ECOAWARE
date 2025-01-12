@@ -1,0 +1,64 @@
+﻿@model List<EP1.ViewModels.SurveySubmissionViewModel>
+@{
+    ViewData["Title"] = "Grade";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+    var surveyId = ViewBag.SurveyId;
+}
+
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>Submission List for Survey @surveyId</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <div class="card">
+                    <div class="card-header">Submission List</div>
+                    <div class="card-body">
+                        <table class="table table-hover" id="dataTables-example" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Submitter</th>
+                                    <th>Submission Date</th>
+                                    <th>Total Score</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.Any())
+                                {
+                                    int index = 1;
+                                    foreach (var submission in Model)
+                                    {
+                                        <tr>
+                                            <td>@index</td>
+                                            <td>@submission.UserName</td>
+                                            <td>@submission.SubmissionDate.ToString("dd/MM/yyyy HH:mm")</td>
+                                            <td>@submission.TotalScore</td>
+                                            <td>@(submission.Active ? "Grading in Progress" : "Not Graded")</td>
+                                            <td>
+                                                <a href="@Url.Action("GradeSubmission", "Grading", new { area = "System", submissionId = submission.SurveySubmissionId })"
+                                                   class="btn btn-primary btn-sm">
+                                                    Grade
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        index++;
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="6" class="text-center">No submissions found.</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

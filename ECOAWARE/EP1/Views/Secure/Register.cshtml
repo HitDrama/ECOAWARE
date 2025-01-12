@@ -1,0 +1,161 @@
+﻿@model EP1.ViewModels.RegisterViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="~/login/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="~/login/css/style.css">
+    <style>
+        /* Position the icon inside the select container */
+        .select-container {
+            position: relative;
+        }
+
+            /* Style the icon inside the label */
+            .select-container i {
+                position: absolute;
+                left: 12px; /* Distance from left edge */
+                top: 50%;
+                transform: translateY(-50%); /* Vertically center the icon */
+                font-size: 16px; /* Adjust icon size if needed */
+                color: #6c757d; /* Optional: icon color */
+            }
+
+            /* Add padding to the left of the select field to prevent overlap with the icon */
+            .select-container select.custom-select {
+                width: 100%; /* Ensure the select takes up full width */
+                padding-left: 30px; /* Space for the icon */
+                border: 1px solid #ced4da; /* Default border color */
+                border-radius: 0.375rem; /* Rounded corners */
+                font-size: 1rem; /* Standard font size */
+                background-color: #fff; /* White background */
+                color: #495057; /* Text color */
+            }
+
+                /* Placeholder-like behavior for the first option */
+                .select-container select.custom-select option[disabled] {
+                    color: #6c757d; /* Lighter color for the placeholder */
+                    font-style: italic; /* Italicize the placeholder text */
+                }
+
+                /* Change border color when the select is focused */
+                .select-container select.custom-select:focus {
+                    border-color: #007bff; /* Blue border on focus */
+                    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Focus shadow effect */
+                }
+
+                /* Optional: style for invalid select (form validation error) */
+                .select-container select.custom-select.is-invalid {
+                    border-color: #dc3545; /* Red border for invalid field */
+                }
+
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class="main">
+        <!-- Sing in  Form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+
+                        <form method="POST" class="register-form" id="register-form" asp-action="Register" novalidate>
+                            @Html.AntiForgeryToken()
+                            <div asp-validation-summary="ModelOnly" class="textdanger"></div>
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+
+                                <input asp-for="FullName" class="form-control" placeholder="Your Name" />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+
+                                <input asp-for="Email" class="form-control" placeholder="Your Email" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+
+                                <input asp-for="Password" class="form-control" placeholder="Password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+
+                                <input asp-for="RePassword" class="form-control" placeholder="Repeat your password" />
+                                <span asp-validation-for="RePassword" class="text-danger"></span>
+                            </div>
+                            <div class="form-group select-container">
+                                <label for="Role">
+                                    <i class="zmdi zmdi-shield-check"></i>
+                                </label>
+                                <select asp-for="Role" asp-items="Html.GetEnumSelectList<EP1.ViewModels.UserRole>()" class="custom-select">
+                                    <option value="" selected disabled> your role</option> 
+                                </select>
+                                <span asp-validation-for="Role" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="class"><i class="zmdi zmdi-graduation-cap"></i></label>
+
+                                <input asp-for="Class" class="form-control" placeholder="Your Class" />
+                                <span asp-validation-for="Class" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="Specification"><i class="zmdi zmdi-library"></i></label>
+                                <!-- Chỉ giữ asp-for để tự động render trường input -->
+                                <input asp-for="Specification" class="form-control" id="Specification" placeholder="Your Specification" />
+                                <span asp-validation-for="Specification" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="Section"><i class="zmdi zmdi-assignment"></i></label>
+                                <!-- Chỉ giữ asp-for để tự động render trường input -->
+                                <input asp-for="Section" class="form-control" id="Section" placeholder="Your Section" />
+                                <span asp-validation-for="Section" class="text-danger"></span>
+                            </div>
+
+                            
+                            
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                                <a asp-action="Index" asp-controller="Web" class="btn btn-secondary cancel-btn" style="margin-left: 10px;">Cancel</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="~/login/images/signup-image.jpg" alt="sing up image"></figure>
+                        <a asp-route="dangnhap" class="signup-image-link">I am already member</a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="~/login/vendor/jquery/jquery.min.js"></script>
+    <script src="~/login/js/main.js"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+
+

@@ -1,0 +1,285 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 page-header">
+                <div class="page-pretitle">Overview</div>
+                <h2 class="page-title">Dashboard</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="icon-big text-center">
+                                    <i class="teal fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="detail">
+                                    <p class="detail-subtitle">Surveys Today</p>
+                                    <span class="number">@ViewBag.SurveyTodayCount</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <hr />
+                            <div class="stats">
+                                <i class="fas fa-calendar"></i> Today
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thẻ 2: Số lượng người tham gia khảo sát 3 ngày gần nhất -->
+            <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="icon-big text-center">
+                                    <i class="olive fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="detail">
+                                    <p class="detail-subtitle">Surveys (Last 3 Days)</p>
+                                    <span class="number">@ViewBag.SurveyLastThreeDaysCount</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <hr />
+                            <div class="stats">
+                                <i class="fas fa-calendar-alt"></i> Last 3 Days
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thẻ 3: Số lượng câu hỏi hôm nay -->
+            <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="icon-big text-center">
+                                    <i class="violet fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="detail">
+                                    <p class="detail-subtitle">Questions Today</p>
+                                    <span class="number">@ViewBag.QuestionTodayCount</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <hr />
+                            <div class="stats">
+                                <i class="fas fa-clock"></i> Today
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Thẻ 4: Số lượng câu hỏi trong 3 ngày gần nhất -->
+            <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="icon-big text-center">
+                                    <i class="orange fas fa-comments"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="detail">
+                                    <p class="detail-subtitle">Questions (Last 3 Days)</p>
+                                    <span class="number">@ViewBag.QuestionLastThreeDaysCount</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <hr />
+                            <div class="stats">
+                                <i class="fas fa-calendar-alt"></i> Last 3 Days
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <div class="head">
+                                    <h5 class="mb-0">Traffic Overview</h5>
+                                    <p class="text-muted">Current year website visitor data</p>
+                                </div>
+                                <div class="canvas-wrapper">
+                                    <canvas class="chart" id="trafficflow"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="content">
+                                <div class="head">
+                                    <h5 class="mb-0">Sales Overview</h5>
+                                    <p class="text-muted">Current year sales data</p>
+                                </div>
+                                <div class="canvas-wrapper">
+                                    <canvas class="chart" id="sales"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="dfd text-center">
+                                <i class="blue large-icon mb-2 fas fa-chalkboard-teacher"></i>
+                                <h4 class="mb-0">@ViewBag.TeacherCount</h4>
+                                <p class="text-muted">Total Teachers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="dfd text-center">
+                                <i class="orange large-icon mb-2 fas fa-user-graduate"></i>
+                                <h4 class="mb-0">@ViewBag.StudentCount</h4>
+                                <p class="text-muted">Total Students</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="dfd text-center">
+                                <i class="grey large-icon mb-2 fas fa-question-circle"></i>
+                                <h4 class="mb-0">@ViewBag.FAQCount</h4>
+                                <p class="text-muted">Total FAQs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-3">
+                <div class="card">
+                    <div class="content">
+                        <div class="row">
+                            <div class="dfd text-center">
+                                <i class="olive large-icon mb-2 fas fa-poll"></i>
+                                <h4 class="mb-0">@ViewBag.SurveyCount</h4>
+                                <p class="text-muted">Total Surveys</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="row mt-4">
+                <!-- Thành viên 1 -->
+                <div class="col-md-4">
+                    <div class="card" style="height: 250px;">
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <img src="~/images/EcoAware.png" alt="Member 1" class="img-fluid rounded-circle" style="max-width: 100px; margin: 10px;">
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dang To Nhan</h5>
+                                    <p class="card-text mb-1"><strong>Date of Birth:</strong> 27/11/2002</p>
+                                    <p class="card-text"><strong>Place of Birth:</strong> HCM, Việt Nam</p>
+                                    <div class="social-icons mt-2">
+                                        <a href="#" class="text-primary mx-1" style="font-size: 1.5rem;"><i class="fab fa-facebook" onmouseover="this.style.color='#3b5998';" onmouseout="this.style.color='inherit';"></i></a>
+                                        <a href="#" class="text-dark mx-1" style="font-size: 1.5rem;"><i class="fab fa-github" onmouseover="this.style.color='#333';" onmouseout="this.style.color='inherit';"></i></a>
+                                        <a href="#" class="text-info mx-1" style="font-size: 1.5rem;"><i class="fab fa-linkedin" onmouseover="this.style.color='#0077b5';" onmouseout="this.style.color='inherit';"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thành viên 2 -->
+                <div class="col-md-4">
+                    <div class="card" style="height: 250px;">
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <img src="https://via.placeholder.com/100x100" alt="Member 2" class="img-fluid rounded-circle" style="max-width: 100px; margin: 10px;">
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Phan Van Duy</h5>
+                                    <p class="card-text mb-1"><strong>Date of Birth:</strong> 15/05/2002</p>
+                                    <p class="card-text"><strong>Place of Birth:</strong> Bình Phước, Việt Nam</p>
+                                    <div class="social-icons mt-2">
+                                        <a href="#" class="text-primary mx-1" style="font-size: 1.5rem;"><i class="fab fa-facebook" onmouseover="this.style.color='#3b5998';" onmouseout="this.style.color='inherit';"></i></a>
+                                        <a href="#" class="text-dark mx-1" style="font-size: 1.5rem;"><i class="fab fa-github" onmouseover="this.style.color='#333';" onmouseout="this.style.color='inherit';"></i></a>
+                                        <a href="#" class="text-info mx-1" style="font-size: 1.5rem;"><i class="fab fa-linkedin" onmouseover="this.style.color='#0077b5';" onmouseout="this.style.color='inherit';"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thành viên 3 -->
+                <div class="col-md-4">
+                    <div class="card" style="height: 250px;">
+                        <div class="row no-gutters">
+                            <div class="col-4">
+                                <img src="https://via.placeholder.com/100x100" alt="Member 3" class="img-fluid rounded-circle" style="max-width: 100px; margin: 10px;">
+                            </div>
+                            <div class="col-8 d-flex align-items-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Phan Tran Dang Chi</h5>
+                                    <p class="card-text mb-1"><strong>Date of Birth:</strong> 20/10/2005</p>
+                                    <p class="card-text"><strong>Place of Birth:</strong> Hồ Chí Minh, Việt Nam</p>
+                                    <div class="social-icons mt-2">
+                                        <a href="#" class="text-primary mx-1" style="font-size: 1.5rem;"><i class="fab fa-facebook" onmouseover="this.style.color='#3b5998';" onmouseout="this.style.color='inherit';"></i></a>
+                                        <a href="#" class="text-dark mx-1" style="font-size: 1.5rem;"><i class="fab fa-github" onmouseover="this.style.color='#333';" onmouseout="this.style.color='inherit';"></i></a>
+                                        <a href="#" class="text-info mx-1" style="font-size: 1.5rem;"><i class="fab fa-linkedin" onmouseover="this.style.color='#0077b5';" onmouseout="this.style.color='inherit';"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

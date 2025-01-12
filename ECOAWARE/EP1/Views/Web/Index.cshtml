@@ -1,0 +1,186 @@
+﻿@model dynamic
+@using EP1.Helper
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<main>
+    <!-- Whats New Start -->
+    <section class="whats-news-area pt-50 pb-20">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-lg-3 col-md-3">
+                            <div class="section-tittle mb-30">
+                                <h3>Whats New</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="properties__button">
+                                <!--Nav Button  -->
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link @(ViewBag.CurrentCategory == "All" ? "active" : "")"
+                                           href="@Url.RouteUrl("trangchu", new { category = "All", page = 1 })">All</a>
+                                        <a class="nav-item nav-link @(ViewBag.CurrentCategory == "Ongoing" ? "active" : "")"
+                                           href="@Url.RouteUrl("trangchu", new { category = "Ongoing", page = 1 })">Ongoing</a>
+                                        <a class="nav-item nav-link @(ViewBag.CurrentCategory == "Upcoming" ? "active" : "")"
+                                           href="@Url.RouteUrl("trangchu", new { category = "Upcoming", page = 1 })">Upcoming</a>
+                                    </div>
+                                </nav>
+                                <!--End Nav Button  -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- Nav Card -->
+                            <div class="tab-content" id="nav-tabContent">
+                                <!-- card one -->
+                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                    <div class="whats-news-caption">
+                                        <div class="row">
+
+
+                                            @foreach (var survey in ViewBag.Surveys)
+                                            {
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="single-what-news mb-100">
+                                                        <div class="what-img">
+                                                            <a href="@Url.Action("Index", "DetailSurvey", new { id = survey.SurveyId })">
+                                                                <img src="~/images/Survey/@survey.Img" alt="Survey Image" style="width: 360px; height: 335px; object-fit: cover;">
+                                                            </a>
+                                                        </div>
+                                                        <div class="what-cap">
+                                                            <span class="color1">@survey.AllowedRoles</span>
+                                                            <h4>
+                                                                <a href="@Url.Action("Index", "DetailSurvey", new { id = survey.SurveyId })">@survey.Title</a>
+                                                            </h4>
+                                                            <p style="margin: 0; font-size: 14px; color: gray;">
+                                                                <strong>Start Date:</strong> @survey.StartDate.ToString("yyyy-MM-dd") <br />
+                                                                <strong>End Date:</strong> @survey.EndDate.ToString("yyyy-MM-dd")
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            }
+                                          
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- End Nav Card -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle mb-40">
+                        <h3>Follow Us</h3>
+                    </div>
+                    <!-- Flow Socail -->
+                    <div class="single-follow mb-45">
+                        <div class="single-box">
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#">
+                                        <img src="~/images/icon/completed-task.png" alt="Survey" style="width: 29px; height: 29px;">
+                                    </a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.TotalSurveys</span>
+                                    <p>Surveys</p>
+                                </div>
+                            </div>
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#">
+                                        <img src="~/images/icon/teacher.png" alt="Teacher Icon" style="width: 29px; height: 29px;">
+                                    </a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.TeacherCount</span>
+                                    <p>Teachers</p>
+                                </div>
+                            </div>
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#">
+                                        <img src="~/images/icon/graduated.png" alt="Student Icon" style="width: 29px; height: 29px;">
+                                    </a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.StudentCount</span>
+                                    <p>Students</p>
+                                </div>
+                            </div>
+
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#"><img src="~/images/icon/faq.png" alt="FAQ Icon" style="width: 29px; height: 29px;"></a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.FAQCount</span>
+                                    <p>FAQs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Poster -->
+                    <div class="news-poster d-none d-lg-block">
+                        <img src="~/frontend/img/news/news_card.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Whats New End -->
+    <!--Start pagination -->
+    <div class="pagination-area pb-45 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="single-wrap d-flex justify-content-center">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-start">
+                                <!-- Nút Previous -->
+                                @if (ViewBag.CurrentPage > 1)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.RouteUrl("trangchu", new { category = ViewBag.CurrentCategory, page = ViewBag.CurrentPage - 1 })">
+                                            <span class="flaticon-arrow roted"></span>
+                                        </a>
+                                    </li>
+                                }
+
+                                <!-- Các trang -->
+                                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                                {
+                                    <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                                        <a class="page-link" href="@Url.RouteUrl("trangchu", new { category = ViewBag.CurrentCategory, page = i })">@i.ToString("D2")</a>
+                                    </li>
+                                }
+
+                                <!-- Nút Next -->
+                                @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.RouteUrl("trangchu", new { category = ViewBag.CurrentCategory, page = ViewBag.CurrentPage + 1 })">
+                                            <span class="flaticon-arrow right-arrow"></span>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End pagination  -->
+</main>
+

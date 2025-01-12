@@ -1,0 +1,178 @@
+﻿@model EP1.Models.FAQ
+@inject UserManager<EP1.Models.Account> UserManager
+@{
+    ViewData["Title"] = Model.Title;
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<section class="blog_area single-post-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0 posts-list" style="overflow: hidden; max-width: 100%; word-wrap: break-word;">
+                <div class="single-post">
+                    <!-- Feature Image -->
+                    <div class="feature-img">
+                        <img class="img-fluid" src="@Url.Content($"~/images/FAQ/{Model.Image}")"
+                             alt="@Model.Title"
+                             style="max-width: 100%; max-height: 500px; height: auto; border-radius: 8px;">
+                    </div>
+
+                    <!-- Blog Details -->
+                    <div class="blog_details">
+
+
+                        <!-- FAQ Title -->
+                        <h2>
+                            @Model.Title
+                        </h2>
+
+                        <!-- Created Date -->
+                        <ul class="blog-info-link mt-3 mb-4">
+                            <li><a href="#"><i class="fa fa-calendar"></i> @Model.CreatedDate.ToString("dd MMM yyyy")</a></li>
+                        </ul>
+
+
+                        <!-- FAQ Description -->
+                        <p class="excert" style="text-align: justify; line-height: 1.8; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; overflow-wrap: break-word; max-width: 100%; overflow: hidden; display: block;">
+                            @Html.Raw(Model.Description)
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="comments-area">
+                    <h4>@ViewBag.Comments.Count Comments</h4>
+                    @foreach (var comment in ViewBag.Comments)
+                    {
+                        <div class="comment-list mb-12">
+                            <div class="single-comment row align-items-start">
+                                <!-- Nội dung bình luận -->
+                                <div class="desc col-12 col-md-10">
+                                    <!-- Tên người dùng -->
+                                    <h5 class="mb-1">
+                                        <a href="#">@UserManager.FindByIdAsync(comment.UserId).Result?.FullName</a>
+                                    </h5>
+
+                                    <!-- Nội dung bình luận -->
+                                    <p class="mb-1 text-wrap" style="word-break: break-word;">
+                                        @comment.Question
+                                    </p>
+
+                                    <!-- Ngày giờ -->
+                                    <p class="text-muted" style="font-size: 0.9rem;">@comment.CreatedDate.ToString("dd MMM yyyy HH:mm")</p>
+                                </div>
+
+                                <!-- Nút hành động -->
+                                @if (User.Identity.IsAuthenticated && User.FindFirstValue(ClaimTypes.NameIdentifier) == comment.UserId)
+                                {
+                                    <div class="action-buttons col-12 col-md-2 text-md-end mt-2 mt-md-0">
+                                        <!-- Nút Edit -->
+                                        <a href="@Url.Action("EditComment", new { id = comment.Id })"
+                                           class="btn btn-sm btn-outline-primary me-2"
+                                           style="border-radius: 4px; width: 45px; height: 34px; padding: 2px 6px; font-size: 0.8rem; text-align: center; line-height: 28px;">
+                                            <i class="fa fa-edit me-1"></i>Edit
+                                        </a>
+
+                                        <!-- Nút Delete -->
+                                        <form asp-action="DeleteComment" method="post" style="display:inline;">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="id" value="@comment.Id" />
+                                            <button type="submit"
+                                                    class="btn btn-sm btn-outline-danger"
+                                                    style="border-radius: 4px; width: 45px; height: 34px; padding: 2px 6px; font-size: 0.8rem; text-align: center; line-height: 28px;">
+                                                <i class="fa fa-trash me-1"></i>Delete
+                                            </button>
+                                        </form>
+                                    </div>
+                                }
+                            </div>
+
+                            <!-- Đường kẻ ngang -->
+                            <hr class="mt-3 mb-3" />
+                        </div>
+                    }
+
+
+                    
+
+                    <form class="form-contact comment_form" asp-action="AddComment" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="faqId" value="@Model.Id" />
+                        <div class="form-group">
+                            <textarea class="form-control w-100" name="commentText" cols="30" rows="9" placeholder="Write Comment"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="button button-contactForm btn_1 boxed-btn">Send Message</button>
+                        </div>
+                    </form>
+
+            </div>
+            
+        </div>
+            <div class="col-lg-4">
+                <!-- Section Tittle -->
+                <div class="section-tittle mb-40">
+                    <h3>Follow Us</h3>
+                </div>
+                <!-- Follow Social Section -->
+                <div class="single-follow mb-45">
+                    <div class="single-box" style="background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <!-- Surveys -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/completed-task.png" alt="Survey" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.SurveyCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Surveys</p>
+                            </div>
+                        </div>
+
+                        <!-- Teachers -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/teacher.png" alt="Teacher Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.TeacherCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Teachers</p>
+                            </div>
+                        </div>
+
+                        <!-- Students -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/graduated.png" alt="Student Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.StudentCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Students</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQs -->
+                        <div class="follow-us d-flex align-items-center">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/faq.png" alt="FAQ Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.FAQCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">FAQs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Poster -->
+                <div class="news-poster d-none d-lg-block">
+                    <img src="~/frontend/img/news/news_card.jpg" alt="">
+                </div>
+            </div>
+    </div>
+</section>

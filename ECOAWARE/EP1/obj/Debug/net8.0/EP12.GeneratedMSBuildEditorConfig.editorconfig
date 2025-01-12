@@ -1,0 +1,107 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EP12
+build_property.RootNamespace = EP12
+build_property.ProjectDir = D:\PC#\EP1\EP12\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\PC#\EP1\EP12
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/Backend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXEJhY2tlbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXENhdGVnb3JpZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXENhdGVnb3JpZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXENhdGVnb3JpZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXENhdGVnb3JpZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXENhdGVnb3JpZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/Manager/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXE1hbmFnZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Areas/System/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3lzdGVtXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Frontend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJvbnRlbmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Secure/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJlXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Secure/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VjdXJlXFJlZ2lzdGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Web/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViXEJsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Web/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViXENhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Web/Category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViXENhdGVnb3J5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Web/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViXENoZWNrb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Web/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViXENvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/Web/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2ViXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/PC\#/EP1/EP12/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

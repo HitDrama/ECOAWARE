@@ -1,0 +1,93 @@
+﻿@model EP1.ViewModels.ProfileViewModel
+
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Information</title>
+    <style>
+        /* CSS cho nút Update */
+        .form-submit {
+            background-color: #4CAF50; /* Màu xanh lá */
+            color: white; /* Màu chữ trắng */
+            border: none; /* Xóa viền */
+            border-radius: 5px; /* Bo góc */
+            padding: 12px 24px; /* Padding trên và dưới là 12px, trái phải là 24px */
+            font-size: 16px; /* Kích thước font */
+            cursor: pointer; /* Con trỏ chuột thay đổi khi hover */
+            transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển màu và scale */
+        }
+
+        /* Khi hover vào nút */
+        .form-submit:hover {
+            background-color: #45a049; /* Đổi màu khi hover */
+            transform: scale(1.05); /* Phóng to một chút */
+        }
+
+        /* Khi nút bị nhấn */
+        .form-submit:active {
+            background-color: #388e3c; /* Màu nền khi click */
+            transform: scale(1); /* Quay về kích thước ban đầu */
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section class="profile">
+            <div class="container">
+                <h2 class="form-title">Account Information</h2>
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">
+                        @TempData["SuccessMessage"]
+                    </div>
+                }
+
+                <form method="post" asp-action="UpdateProfile">
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <label for="FullName">FullName</label>
+                        <input asp-for="FullName" class="form-control" placeholder="FullName" readonly />
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="Email" readonly />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Class">Class</label>
+                        <input asp-for="Class" class="form-control" placeholder="class" />
+                        <span asp-validation-for="Class" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Specification">Specification </label>
+                        <input asp-for="Specification" class="form-control" placeholder="Specification" />
+                        <span asp-validation-for="Specification" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Section">Section</label>
+                        <input asp-for="Section" class="form-control" placeholder="Khoa" />
+                        <span asp-validation-for="Section" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="UpdateProfile" class="form-submit" />
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

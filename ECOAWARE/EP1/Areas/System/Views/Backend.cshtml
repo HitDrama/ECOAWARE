@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<!-- 
+* Bootstrap Simple Admin Template
+* Version: 2.1
+* Author: Alexis Luna
+* Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard | Bootstrap Simple Admin Template</title>
+    <link href="~/backend/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="~/backend/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="~/backend/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="~/backend/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/backend/css/master.css" rel="stylesheet">
+    <link href="~/backend/vendor/flagiconcss/css/flag-icon.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote/dist/summernote-lite.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="~/backend/img/bootstraper-logo.png" alt="bootraper logo" class="app-logo">
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a asp-route="manager"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Account")"><i class="fas fa-user"></i> Account</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Survey")"><i class="fas fa-poll"></i> Survey</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Grading")"><i class="fas fa-check-circle"></i> Grading</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "FAQ")"><i class="fas fa-question-circle"></i> FAQ</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Index", "Blog")"><i class="fas fa-newspaper"></i> Blog</a>
+                </li>
+                
+            </ul>
+        </nav>
+        <div id="body">
+            <!-- navbar navigation component -->
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light">
+                    <i class="fas fa-bars"></i><span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ms-auto">
+                        
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item dropdown">
+                                <div class="nav-dropdown">
+                                    <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fas fa-user"></i> <span id="userName">@User.Identity.Name</span> <i style="font-size: .8em;" class="fas fa-caret-down"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end nav-link-menu">
+                                        <ul class="nav-list">
+                                            <li><a asp-route="profile" class="dropdown-item"><i class="fas fa-address-card"></i> Profile</a></li>
+                                            <div class="dropdown-divider"></div>
+                                            <li><a asp-route="dangxuat" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-route="dangnhap">Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-route="dangky">Sign up</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
+            @RenderBody()
+        </div>
+    </div>
+    <script src="~/backend/vendor/jquery/jquery.min.js"></script>
+    <script src="~/backend/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/backend/vendor/chartsjs/Chart.min.js"></script>
+    <script src="~/backend/js/dashboard-charts.js"></script>
+    <script src="~/backend/js/script.js"></script>
+    <script src="~/backend/js/jquery-3.6.0.min.js"></script>
+    <script src="~/backend/js/jquery.validate.min.js"></script>
+    <script src="~/backend/js/jquery.validate.unobtrusive.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',(event)=>{
+            var toastEL=document.querySelector('.toast');
+            var loadtoast=new bootstrap.Toast(toastEL);
+            loadtoast.show();
+        });
+    </script>
+
+    <script src="~/tinymce/js/tinymce/tinymce.min.js"></script>
+    @* <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            tinymce.init({
+                selector: '#Description', // Chỉ định ID của textarea
+                height: 300, // Chiều cao của trình chỉnh sửa
+                plugins: 'link image table code lists', // Thêm các plugin cần thiết
+                toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | outdent indent | link image | code', // Thanh công cụ
+                menubar: false, // Ẩn/Hiện menu trên cùng
+                branding: false, // Xóa logo TinyMCE
+                content_css: '~/css/editor.css', // Đường dẫn CSS tùy chỉnh
+            });
+        });
+    </script> *@
+    
+    <script src="https://cdn.jsdelivr.net/npm/summernote/dist/summernote-lite.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('#Description').summernote({
+                placeholder: 'Enter your text here...',
+                tabsize: 2,
+                height: 200
+            });
+        });
+    </script>
+
+
+    @RenderSection("Scripts", required: false)
+    
+</body>
+
+</html>

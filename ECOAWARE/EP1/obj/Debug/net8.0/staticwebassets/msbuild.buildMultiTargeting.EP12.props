@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EP12.props" />
+</Project>

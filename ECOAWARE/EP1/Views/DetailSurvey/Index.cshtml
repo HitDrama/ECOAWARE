@@ -1,0 +1,147 @@
+﻿@model EP1.ViewModels.SurveyViewModel
+
+@{
+    ViewData["Title"] = "Survey details";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<main>
+    <!-- About US Start -->
+    <div class="about-area">
+        <div class="container">
+            <!-- Hot Aimated News Tittle-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="trending-tittle">
+                        <strong>Message</strong>
+                        <!-- <p>Rem ipsum dolor sit amet, consectetur adipisicing elit.</p> -->
+                        <div class="trending-animated">
+                            <ul id="js-news" class="js-hidden">
+                                <li class="news-item">Protect the Earth today, so future generations can thrive tomorrow.</li>
+                                <li class="news-item">Small changes in our habits can make a big difference for the planet.</li>
+                                <li class="news-item">The Earth is not ours to waste, it is ours to protect.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="about-right mb-90">
+                        <!-- Tiêu đề -->
+                        <div class="section-tittle mb-30 pt-30 text-center">
+                            <h1>Survey details</h1>
+                        </div>
+
+                        <!-- Nội dung khảo sát -->
+                        <div class="about-prea">
+                            <p class="about-pera1 mb-25">
+                                <strong>Title:</strong> @Model.Title
+                            </p>
+                            <p class="about-pera1 mb-25">
+                                <strong>Time takes place:</strong>
+                                @Model.StartDate.ToString("dd/MM/yyyy") - @Model.EndDate.ToString("dd/MM/yyyy")
+                            </p>
+                            <p class="about-pera1 mb-25">
+                                <strong>Roles allowed:</strong> @Model.AllowedRoles
+                            </p>
+                            <p class="about-pera1 mb-25">
+                                <strong>Trạng thái:</strong>
+                                <span class="badge @(Model.Status == "Đang diễn ra" ? "badge-success" : (Model.Status == "Chưa bắt đầu" ? "badge-warning" : "badge-secondary"))">
+                                    @Model.Status
+                                </span>
+                            </p>
+
+                            <!-- Nút tham gia -->
+                            <div class="action-buttons mt-40">
+                                @if (Model.Status == "Đang diễn ra")
+                                {
+                                    <a href="@Url.Action("Join", "DetailSurvey", new { id = Model.SurveyId })" class="btn btn-primary btn-lg">Join</a>
+                                }
+                                else if (Model.Status == "Chưa bắt đầu")
+                                {
+                                    <button class="btn btn-warning btn-lg" disabled>The survey has not started yet</button>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-secondary btn-lg" disabled>The survey has ended</button>
+                                }
+                            </div>
+                        </div>
+
+                        <!-- Mô tả khảo sát -->
+                        <div class="about-description mt-50">
+                            <h3>Survey Description</h3>
+                            <div style="text-align: justify; line-height: 1.8; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; overflow-wrap: break-word; max-width: 100%; overflow-y: auto; max-height: 400px; padding: 10px;">
+                                @Html.Raw(Model.Description)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Follow Us -->
+                <div class="col-lg-4">
+                    <!-- Section Tittle -->
+                    <div class="section-tittle mb-40">
+                        <h3>Follow Us</h3>
+                    </div>
+                    <!-- Flow Socail -->
+                    <div class="single-follow mb-45">
+                        <div class="single-box">
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#">
+                                        <img src="~/images/icon/completed-task.png" alt="Survey" style="width: 29px; height: 29px;">
+                                    </a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.SurveyCount</span>
+                                    <p>Surveys</p>
+                                </div>
+                            </div>
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#">
+                                        <img src="~/images/icon/teacher.png" alt="Teacher Icon" style="width: 29px; height: 29px;">
+                                    </a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.TeacherCount</span>
+                                    <p>Teachers</p>
+                                </div>
+                            </div>
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#">
+                                        <img src="~/images/icon/graduated.png" alt="Student Icon" style="width: 29px; height: 29px;">
+                                    </a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.StudentCount</span>
+                                    <p>Students</p>
+                                </div>
+                            </div>
+
+                            <div class="follow-us d-flex align-items-center">
+                                <div class="follow-social">
+                                    <a href="#"><img src="~/images/icon/faq.png" alt="FAQ Icon" style="width: 29px; height: 29px;"></a>
+                                </div>
+                                <div class="follow-count">
+                                    <span>@ViewBag.FAQCount</span>
+                                    <p>FAQs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- New Poster -->
+                    <div class="news-poster d-none d-lg-block">
+                        <img src="~/frontend/img/news/news_card.jpg" alt="">
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+    <!-- About US End -->
+</main>

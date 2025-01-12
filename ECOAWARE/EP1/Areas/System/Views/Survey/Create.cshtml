@@ -1,0 +1,99 @@
+﻿@model EP1.ViewModels.SurveyViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<h2>Add New Survey</h2>
+
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>Create Survey</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">Create a New Survey</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Fill out the survey details below</h5>
+                        <form asp-action="Create" method="post" enctype="multipart/form-data">
+                            <div class="mb-3 row">
+                                <label for="Title" class="col-sm-2">Title</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Title" class="form-control" />
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="Description" class="col-sm-2">Description</label>
+                                <div class="col-sm-10">
+                                    <textarea id="Description" name="Description" asp-for="Description"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="StartDate" class="col-sm-2">Start Date</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="StartDate" type="date" class="form-control" />
+                                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="EndDate" class="col-sm-2">End Date</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="EndDate" type="date" class="form-control" />
+                                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="AllowedRoles" class="col-sm-2">Allowed Roles</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="AllowedRoles" class="form-control" placeholder="e.g., Student,Teacher" />
+                                    <span asp-validation-for="AllowedRoles" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="Img" class="col-sm-2">Survey Image</label>
+                                <div class="col-sm-10">
+                                    <input type="file" id="Img" name="imgFile" class="form-control" />
+                                    <small class="form-text text-muted">Upload an image for the survey (optional).</small>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <div class="col-sm-4 offset-sm-2">
+                                    <a asp-action="Index" class="btn btn-secondary mb-2">
+                                        <i class="fas fa-times"></i> Cancel
+                                    </a>
+                                    <button type="submit" class="btn btn-primary mb-2">
+                                        <i class="fas fa-save"></i> Save
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var form = document.querySelector('form');
+    form.onsubmit = function () {
+        document.querySelector('#Description').value = quill.root.innerHTML;
+    };
+</script>
+

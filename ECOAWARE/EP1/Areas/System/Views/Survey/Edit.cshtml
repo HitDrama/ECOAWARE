@@ -1,0 +1,106 @@
+﻿@model EP1.ViewModels.SurveyViewModel
+@{
+    ViewData["Title"] = "Edit Survey";
+    Layout = "~/Areas/System/Views/Backend.cshtml";
+}
+
+<div class="content">
+    <div class="container">
+        <div class="page-title">
+            <h3>Edit Survey</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">Edit Survey Details</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Update the survey information below</h5>
+                        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                            @Html.AntiForgeryToken()
+
+                            <input type="hidden" asp-for="SurveyId" />
+
+                            <div class="mb-3 row">
+                                <label for="Title" class="col-sm-2">Title</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="Title" class="form-control" />
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="Description" class="col-sm-2">Description</label>
+                                <div class="col-sm-10">
+                                    <textarea asp-for="Description" class="form-control" id="Description" name="Description"></textarea>
+                                    <span asp-validation-for="Description" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="StartDate" class="col-sm-2">Start Date</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="StartDate" type="date" class="form-control" />
+                                    <span asp-validation-for="StartDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="EndDate" class="col-sm-2">End Date</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="EndDate" type="date" class="form-control" />
+                                    <span asp-validation-for="EndDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="AllowedRoles" class="col-sm-2">Allowed Roles</label>
+                                <div class="col-sm-10">
+                                    <input asp-for="AllowedRoles" class="form-control" placeholder="Enter roles (e.g., Student,Teacher)" />
+                                    <span asp-validation-for="AllowedRoles" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <label for="Img" class="col-sm-2">Current Survey Image</label>
+                                <div class="col-sm-10">
+                                    @if (!string.IsNullOrEmpty(Model.Img))
+                                    {
+                                        <div>
+                                            <img src="~/images/Survey/@Model.Img" alt="Current Image" class="img-thumbnail" style="max-width: 200px;" />
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <p>No image available.</p>
+                                    }
+                                    <input type="hidden" asp-for="Img" />
+                                    <label for="ImgFile">Upload New Image (optional)</label>
+                                    <input type="file" id="ImgFile" name="ImgFile" class="form-control" />
+                                    <small class="form-text text-muted">Leave this field empty to keep the current image.</small>
+                                </div>
+                            </div>
+                            <div class="line"></div>
+                            <br />
+                            <div class="mb-3 row">
+                                <div class="col-sm-4 offset-sm-2">
+                                    <a asp-action="Index" class="btn btn-secondary mb-2">
+                                        <i class="fas fa-times"></i> Cancel
+                                    </a>
+                                    <button type="submit" class="btn btn-primary mb-2">
+                                        <i class="fas fa-save"></i> Save Changes
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

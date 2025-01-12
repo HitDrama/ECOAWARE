@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+
+
+
+<!-- ================ contact section start ================= -->
+<section class="contact-section">
+    <div class="container">
+        <!-- Google Map Section -->
+        <div class="d-none d-sm-block mb-5 pb-4">
+            <div id="map"></div>
+
+            <script>
+                var map = L.map('map').setView([10.845673315083355, 106.712039610459], 20); // Tọa độ trung tâm
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+                L.marker([51.505, -0.09]).addTo(map)
+                    .bindPopup('This is a marker.')
+                    .openPopup();
+            </script>
+        </div>
+
+        <!-- Form Section -->
+        <div class="row">
+            <div class="col-12">
+                <h2 class="contact-title">Get in Touch</h2>
+            </div>
+            <div class="col-lg-8">
+                <form method="post" asp-action="PostContact"
+                      style="padding: 25px; border: 1px solid #e0e0e0; border-radius: 12px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); background-color: #fdfdfd; animation: fadeIn 1s ease-in-out;">
+                    @Html.AntiForgeryToken()
+
+                    <!-- Tiêu đề -->
+                    <h2 style="text-align: center; margin-bottom: 25px; color: #4CAF50; font-family: 'Roboto', sans-serif; font-size: 24px;">Contact Us</h2>
+
+                    <!-- Name Field -->
+                    <div style="margin-bottom: 20px; position: relative;">
+                        <label for="name" style="display: block; margin-bottom: 8px; color: #333; font-weight: 600;">Your Name</label>
+                        <input type="text" id="name" name="name"
+                               style="width: 100%; padding: 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 16px; color: #555; background-color: #fafafa;"
+                               placeholder="Enter your name" required />
+                    </div>
+
+                    <!-- Email Field -->
+                    <div style="margin-bottom: 20px; position: relative;">
+                        <label for="email" style="display: block; margin-bottom: 8px; color: #333; font-weight: 600;">Email Address</label>
+                        <input type="email" id="email" name="email"
+                               style="width: 100%; padding: 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 16px; color: #555; background-color: #fafafa;"
+                               placeholder="Enter email address" required />
+                    </div>
+
+                    <!-- Subject Field -->
+                    <div style="margin-bottom: 20px; position: relative;">
+                        <label for="subject" style="display: block; margin-bottom: 8px; color: #333; font-weight: 600;">Subject</label>
+                        <input type="text" id="subject" name="subject"
+                               style="width: 100%; padding: 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 16px; color: #555; background-color: #fafafa;"
+                               placeholder="Enter Subject" />
+                    </div>
+
+                    <!-- Message Field -->
+                    <div style="margin-bottom: 25px; position: relative;">
+                        <label for="message" style="display: block; margin-bottom: 8px; color: #333; font-weight: 600;">Message</label>
+                        <textarea id="message" name="message"
+                                  style="width: 100%; padding: 12px; border: 1px solid #d9d9d9; border-radius: 6px; font-size: 16px; color: #555; background-color: #fafafa; height: 150px;"
+                                  placeholder="Enter Message" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                            style="width: 100%; padding: 12px; background-color: #4CAF50; color: white; font-size: 18px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; transition: background-color 0.3s ease;">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+
+           
+
+            <div class="col-lg-3 offset-lg-1">
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-home"></i></span>
+                    <div class="media-body">
+                        <h3>Buttonwood, California.</h3>
+                        <p>Rosemead, CA 91770</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                    <div class="media-body">
+                        <h3>+1 253 565 2365</h3>
+                        <p>Mon to Fri 9am to 6pm</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="ti-email"></i></span>
+                    <div class="media-body">
+                        <h3>support@colorlib.com</h3>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Inline Animation -->
+
+<!-- ================ contact section end ================= -->

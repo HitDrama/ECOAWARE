@@ -1,0 +1,107 @@
+﻿@model EP1.Models.Blog
+@{
+    ViewData["Title"] = "DetailBlog";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<section class="blog_area single-post-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mb-5 mb-lg-0 posts-list" style="overflow: hidden; max-width: 100%; word-wrap: break-word;">
+                <div class="single-post">
+                    <!-- Feature Image -->
+                    <div class="feature-img">
+                        <img class="img-fluid" src="@Url.Content($"~/images/Blog/{Model.Image}")"
+                             alt="@Model.Title"
+                             style="max-width: 100%; max-height: 500px; height: auto; border-radius: 8px;">
+                    </div>
+
+                    <!-- Blog Details -->
+                    <div class="blog_details">
+                        <!-- Blog Title -->
+                        <h2>
+                            @Model.Title
+                        </h2>
+
+                        <!-- Created Date -->
+                        <ul class="blog-info-link mt-3 mb-4">
+                            <li><a href="#"><i class="fa fa-calendar"></i> @Model.CreatedDate.ToString("dd MMM yyyy")</a></li>
+                        </ul>
+
+                        <!-- Blog Description -->
+                        <p class="excert" style="text-align: justify; line-height: 1.8; word-wrap: break-word; word-break: break-word; white-space: pre-wrap; overflow-wrap: break-word; max-width: 100%; overflow: hidden; display: block;">
+                            @Html.Raw(Model.Description)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <!-- Section Title -->
+                <div class="section-tittle mb-40">
+                    <h3>Follow Us</h3>
+                </div>
+                <!-- Follow Social Section -->
+                <div class="single-follow mb-45">
+                    <div class="single-box" style="background-color: #f8f9fa; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <!-- Surveys -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/completed-task.png" alt="Survey" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.SurveyCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Surveys</p>
+                            </div>
+                        </div>
+
+                        <!-- Teachers -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/teacher.png" alt="Teacher Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.TeacherCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Teachers</p>
+                            </div>
+                        </div>
+
+                        <!-- Students -->
+                        <div class="follow-us d-flex align-items-center mb-4">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/graduated.png" alt="Student Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.StudentCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Students</p>
+                            </div>
+                        </div>
+
+                        <!-- FAQs -->
+                        <div class="follow-us d-flex align-items-center">
+                            <div class="follow-social mr-3">
+                                <a href="#">
+                                    <img src="~/images/icon/blog.png" alt="FAQ Icon" style="width: 40px; height: 40px;">
+                                </a>
+                            </div>
+                            <div class="follow-count">
+                                <span style="font-size: 20px; font-weight: bold;">@ViewBag.BlogCount</span>
+                                <p style="margin: 0; font-size: 14px; color: #6c757d;">Blogs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Poster -->
+                <div class="news-poster d-none d-lg-block">
+                    <img src="~/frontend/img/news/news_card.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
