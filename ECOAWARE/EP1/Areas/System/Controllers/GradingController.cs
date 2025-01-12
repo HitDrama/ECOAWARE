@@ -3,11 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using EP1.Models;
 using EP1.ViewModels;
 using EP1.Helper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EP1.Areas.System.Controllers
 {
 	[Area("System")]
 	[Route("/System/grading")]
+	[Authorize(Roles = "Admin")]
 	public class GradingController : Controller
 	{
 		private readonly ShopContext _context;

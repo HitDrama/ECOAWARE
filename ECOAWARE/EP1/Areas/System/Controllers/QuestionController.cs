@@ -1,5 +1,6 @@
 ﻿using EP1.Models;
 using EP1.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,7 @@ namespace EP1.Areas.System.Controllers
 {
 	[Area("System")]
 	[Route("/System/questions")]
+	[Authorize(Roles = "Admin")]
 	public class QuestionController : Controller
 	{
 		private readonly ShopContext _context;

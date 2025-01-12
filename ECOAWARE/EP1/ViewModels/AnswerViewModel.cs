@@ -12,7 +12,7 @@ namespace EP1.ViewModels
 
 		[Required(ErrorMessage = "Answer Text is required.")]
 		[StringLength(2000, ErrorMessage = "Answer Text cannot exceed 2000 characters.")]
-		public string AnswerText { get; set; }  // Câu trả lời của người dùng
+		public string AnswerText { get; set; }
 
 		public double Score { get; set; }  // Điểm cho câu trả lời (mặc định là 0 cho tự luận)
 

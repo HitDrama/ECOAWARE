@@ -708,6 +708,7 @@ wwwroot\frontend\scss\_wecky-new.scss
 wwwroot\frontend\scss\_whats-new.scss
 wwwroot\frontend\scss\_youtube.scss
 wwwroot\frontend\scss\style.scss
+wwwroot\images\anhnhan.jpg
 wwwroot\images\Banner\Blog.png
 wwwroot\images\Banner\FAQ.png
 wwwroot\images\Banner\FAQs (2).png
@@ -740,7 +741,10 @@ wwwroot\images\Blog\FAQs (5)_0f9c703e-322a-4fc1-ad5b-59583fc933af.png
 wwwroot\images\Blog\FAQs (7)_3e1ffc24-aa7c-41ca-ba21-58f9785c1d0e.png
 wwwroot\images\Blog\FAQs_2574e8f5-6273-4f94-823e-e3f2c2d8b450.png
 wwwroot\images\Blog\giay5_7dd430cd-bdc3-4dbe-9975-4b30f68be2e8.png
+wwwroot\images\Chi.jpg
+wwwroot\images\Duy.jpg
 wwwroot\images\EcoAware.png
+wwwroot\images\Ecoaware-backend.png
 wwwroot\images\EcoAware-removebg-preview.png
 wwwroot\images\FAQ\banner-02_7f60539e-e1d3-40b2-86ef-1626e4c889ce.jpg
 wwwroot\images\FAQ\competition_a28ca800-3699-44cc-be3e-a1e18ed13d3c.png

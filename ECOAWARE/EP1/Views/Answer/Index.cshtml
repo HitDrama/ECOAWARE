@@ -8,7 +8,7 @@
     <i class="fas fa-poll" style="margin-right: 10px;"></i>Survey: @ViewBag.SurveyTitle
 </h1>
 
-<form id="surveyForm" asp-action="SubmitAnswers" method="post" class="container mt-5 p-4 rounded shadow-lg" style="background: #f9f9f9;">
+<form id="surveyForm" asp-action="SubmitAnswers" method="post" class="container mt-5 p-4 rounded shadow-lg" style="background: #f9f9f9;" novalidate>
     <input type="hidden" name="surveyId" value="@ViewBag.SurveyId" />
 
     @for (int i = 0; i < Model.Count; i++)
@@ -18,13 +18,13 @@
                 <i class="fas fa-question-circle" style="margin-right: 10px;"></i>
                 Question @Model[i].QuestionId: @Html.Raw(Model[i].Content.Replace("\n", "<br>"))
             </h3>
-            <p class="text-secondary">
+            <p class="text-secondary" style="margin-bottom: 10px;">
                 <i class="fas fa-info-circle"></i> Type:
-                <span class="badge @(Model[i].Type == EP1.Models.QuestionType.MultipleChoice ? "badge-info" : "badge-warning")">
+                <span style="padding: 5px; color: white; background-color: @(Model[i].Type == EP1.Models.QuestionType.MultipleChoice ? "#17a2b8" : "#ffc107"); border-radius: 3px;">
                     @(Model[i].Type == EP1.Models.QuestionType.MultipleChoice ? "Multiple Choice" : "Essay")
                 </span>
             </p>
-            <p class="text-muted">
+            <p class="text-muted" style="margin-bottom: 10px;">
                 <i class="fas fa-star"></i> Points: <strong>@Model[i].Points</strong>
             </p>
 
@@ -33,7 +33,7 @@
             @if (Model[i].Type == EP1.Models.QuestionType.MultipleChoice)
             {
                 <div class="form-group mt-3 p-4 rounded" style="background-color: #e3f2fd; border: 2px solid #007BFF;">
-                    <label for="answer-question-@i" class="font-weight-bold d-flex align-items-center">
+                    <label for="answer-question-@i" style="font-weight: bold; display: flex; align-items: center;">
                         <i class="fas fa-check-circle text-primary" style="margin-right: 10px;"></i>
                         Multiple Choice (Enter one character only)
                     </label>
@@ -46,12 +46,13 @@
                            pattern="[A-Za-z]"
                            oninput="this.value = this.value.replace(/[^A-Za-z]/g, '').toUpperCase();"
                            style="border: 2px solid #007BFF; padding: 10px; font-size: 16px;">
+                    <div id="error-multiple-@i" style="color: red; font-size: 0.9rem; display: none;">This field is required.</div>
                 </div>
             }
             else if (Model[i].Type == EP1.Models.QuestionType.Essay)
             {
                 <div class="form-group mt-3 p-4 rounded" style="background-color: #e8f5e9; border: 2px solid #28A745;">
-                    <label for="textarea-question-@i" class="font-weight-bold d-flex align-items-center">
+                    <label for="textarea-question-@i" style="font-weight: bold; display: flex; align-items: center;">
                         <i class="fas fa-pencil-alt text-success" style="margin-right: 10px;"></i>
                         Essay (Write your detailed answer below)
                     </label>
@@ -61,13 +62,14 @@
                               rows="4"
                               placeholder="Enter your answer..."
                               style="border: 2px solid #28A745; padding: 10px; font-size: 16px;"></textarea>
+                    <div id="error-essay-@i" style="color: red; font-size: 0.9rem; display: none;">This field is required.</div>
                 </div>
             }
         </div>
     }
 
     <div class="text-center mt-4">
-        <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#confirmSubmitModal">
+        <button type="button" class="btn btn-lg btn-success" onclick="validateForm()">
             <i class="fas fa-paper-plane" style="margin-right: 10px;"></i>Submit
         </button>
     </div>
@@ -105,8 +107,28 @@
     </div>
 </div>
 
-@section Scripts {
-    <script>
-        // You can add any additional interactions or animations if needed
-    </script>
-}
+<script>
+    function validateForm() {
+        let isValid = true; // Flag to track form validity
+        const questions = document.querySelectorAll('.question');
+
+        questions.forEach((question, index) => {
+            const input = question.querySelector('input[name*="AnswerText"], textarea[name*="AnswerText"]');
+            const error = question.querySelector('div[id^="error-"]');
+
+            if (!input.value.trim()) {
+                isValid = false;
+                input.style.borderColor = 'red'; // Highlight the field with red
+                error.style.display = 'block'; // Show error message
+            } else {
+                input.style.borderColor = ''; // Reset border color
+                error.style.display = 'none'; // Hide error message
+            }
+        });
+
+        if (isValid) {
+            document.getElementById('surveyForm').submit();
+        }
+    }
+</script>
+

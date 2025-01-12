@@ -8,8 +8,8 @@ namespace EP1.Areas.System.Controllers
 {
     [Area("System")]
     [Route("/System/Blog")]
-    
-    public class BlogController : Controller
+	[Authorize(Roles = "Admin")]
+	public class BlogController : Controller
     {
         private readonly ShopContext _context;
         private readonly IWebHostEnvironment _env;

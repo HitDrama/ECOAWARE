@@ -1,19 +1,19 @@
 ﻿@model IEnumerable<EP1.Models.FAQ>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "FAQ List";
     Layout = "~/Areas/System/Views/Backend.cshtml";
 }
 
 <div class="content">
     <div class="container">
         <div class="page-title">
-            <h3>Danh sách FAQ</h3>
-            <a href="/System/FAQ/Add" class="btn btn-success">Thêm mới</a>
+            <h3>FAQ List</h3>
+            <a href="/System/FAQ/Add" class="btn btn-success">Add New</a>
         </div>
         <div class="row">
             <div class="col-md-12 col-lg-12">
                 <div class="card">
-                    <div class="card-header">Danh sách câu hỏi thường gặp</div>
+                    <div class="card-header">Frequently Asked Questions</div>
                     <div class="card-body">
                         <table class="table table-hover"
                                id="dataTables-example"
@@ -21,11 +21,10 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Tiêu đề</th>
-                                    
-                                    <th>Ngày tạo</th>
-                                    <th>Hình ảnh</th>
-                                    <th>Hành động</th>
+                                    <th>Title</th>
+                                    <th>Created Date</th>
+                                    <th>Image</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -34,8 +33,7 @@
                                     <tr>
                                         <td>@faq.Id</td>
                                         <td>@faq.Title</td>
-                                      
-                                        <td>@faq.CreatedDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@faq.CreatedDate.ToString("MM/dd/yyyy")</td>
                                         <td>
                                             @if (!string.IsNullOrEmpty(faq.Image))
                                             {
@@ -61,6 +59,3 @@
         </div>
     </div>
 </div>
-
-
-

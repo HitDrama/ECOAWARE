@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\EP1",
+    "\\EP1\\Areas",
+    "\\EP1\\Areas\\System",
+    "\\EP1\\Areas\\System\\Views",
+    "\\EP1\\Areas\\System\\Views\\Survey",
     "\\EP1\\Controllers",
     "\\EP1\\Views",
     "\\EP1\\Views\\Secure"
   ],
-  "SelectedNode": "\\EP1\\Views\\Secure\\Login.cshtml",
+  "SelectedNode": "\\EP1\\Areas\\System\\Views\\Survey\\Edit.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -12,6 +12,7 @@ namespace EP1.Areas.System.Controllers
 {
 	[Area("System")]
 	[Route("/System/survey")]
+	[Authorize(Roles = "Admin")]
 	public class SurveyController : Controller
 	{
 		private readonly ShopContext _context;

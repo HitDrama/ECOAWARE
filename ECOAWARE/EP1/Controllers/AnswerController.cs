@@ -85,6 +85,13 @@ namespace EP1.Controllers
 				TotalScore = 0
 			};
 
+			if (!ModelState.IsValid)
+			{
+				// Trả về view với thông báo lỗi nếu validation không thành công
+				TempData["ErrorMessage"] = "Please correct the errors and submit again.";
+				return View(answers);
+			}
+
 			_context.SurveySubmissions.Add(submission);
 			await _context.SaveChangesAsync();
 

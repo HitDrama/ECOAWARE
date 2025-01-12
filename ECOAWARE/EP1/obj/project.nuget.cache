@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/T1IuDssOZg=",
+  "dgSpecHash": "qwvm5dmFECg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Windows 10\\Downloads\\FPTAptechEnd\\FPTAptechTest\\EP1\\EP1.csproj",
+  "projectFilePath": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\EP1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Windows 10\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Windows 10\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

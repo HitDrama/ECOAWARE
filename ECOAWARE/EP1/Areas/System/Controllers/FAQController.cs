@@ -6,11 +6,13 @@ using System.IO;
 using System.Linq;
 using EP1.ViewModels;
 using IOFile = System.IO.File;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EP1.Areas.System.Controllers
 {
 	[Area("System")]
 	[Route("/System/FAQ")]
+	[Authorize(Roles = "Admin")]
 	public class FAQController : Controller
 	{
 		private readonly ShopContext _context;

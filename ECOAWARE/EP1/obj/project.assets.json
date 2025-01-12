@@ -8084,11 +8084,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Windows 10\\Downloads\\FPTAptechEnd\\FPTAptechTest\\EP1\\EP1.csproj",
+      "projectUniqueName": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\EP1.csproj",
       "projectName": "EP1",
-      "projectPath": "C:\\Users\\Windows 10\\Downloads\\FPTAptechEnd\\FPTAptechTest\\EP1\\EP1.csproj",
+      "projectPath": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\EP1.csproj",
       "packagesPath": "C:\\Users\\Windows 10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Windows 10\\Downloads\\FPTAptechEnd\\FPTAptechTest\\EP1\\obj\\",
+      "outputPath": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
