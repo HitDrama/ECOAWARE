@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Access Denied";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access Denied</title>
+    <style>
+        .access-denied-container {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 50px auto; /* Thêm khoảng cách giữa container với header và footer */
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+            .access-denied-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+
+            .access-denied-container h1 {
+                font-size: 2.5rem;
+                margin: 20px 0;
+                color: #d9534f;
+            }
+
+            .access-denied-container p {
+                font-size: 1rem;
+                margin: 10px 0 20px;
+                color: #555;
+            }
+
+            .access-denied-container a {
+                display: inline-block;
+                background-color: #d9534f;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
+
+                .access-denied-container a:hover {
+                    background-color: #c9302c;
+                }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <div class="access-denied-container">
+        <img src="https://st4.depositphotos.com/27210766/29572/v/450/depositphotos_295728840-stock-illustration-denied-stamp-grunge-texture-vector.jpg" alt="Access Denied">
+        <h1>Access Denied</h1>
+        <p>Sorry, you do not have permission to access this page.</p>
+        <a href="/">Go Back to Home</a>
+    </div>
+</body>
+</html>

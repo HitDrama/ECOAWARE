@@ -774,6 +774,7 @@ wwwroot\images\Survey\graduated_13aa6456-9a3a-4b94-8b33-8df92413fa0c.png
 wwwroot\images\Survey\Surveys (3)_2fab858e-e957-423b-83f8-9eb85d59151f.png
 wwwroot\images\Survey\Surveys (3)_55658c82-9162-48c2-a16a-8ee927208a68.png
 wwwroot\images\Survey\Surveys (4)_5681eaf0-842b-4b17-8526-efac4e81af26.png
+wwwroot\images\Survey\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png
 wwwroot\images\Survey\Surveys (6)_eba5561a-3ede-4419-b8c6-546b9903f2cc.png
 wwwroot\images\Survey\Surveys (6)_f1e8bf6a-e53b-46be-b603-6b98b3982ac0.png
 wwwroot\images\Survey\Surveys (7)_e68ff82c-b046-4227-aa8f-5a1b35794567.png

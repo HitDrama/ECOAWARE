@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gpwWn8RU+8rQCq5yNjSIA53SQBbU4M9snzRjNFHZH2E=",
+  "Hash": "mODQbznmMojWFfxZbP+G4rhCTa4+0JYmLdq5rbISJbw=",
   "Source": "EP1",
   "BasePath": "_content/EP1",
   "Mode": "Default",
@@ -11959,8 +11959,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3phh9q1n01",
-      "Integrity": "15RyUIpWjGoITJNtIo7ZosEdOJApXV+s+RbZD9D8Kxo=",
+      "Fingerprint": "y84ra22daa",
+      "Integrity": "QkBy7QBvQCVD/BOVDhbOoj+ILabIMQSqrgZE9tk0s98=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\frontend\\img\\favicon.ico"
@@ -16311,6 +16311,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Survey\\Surveys (4)_5681eaf0-842b-4b17-8526-efac4e81af26.png"
+    },
+    {
+      "Identity": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\images\\Survey\\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png",
+      "SourceId": "EP1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\",
+      "BasePath": "_content/EP1",
+      "RelativePath": "images/Survey/Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tt2ndc2h5h",
+      "Integrity": "71RpCeI0Zc3lRncWZSTBzZScrWTKbwWSA7hUqBI6zo4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Survey\\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png"
     },
     {
       "Identity": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\images\\Survey\\Surveys (6)_eba5561a-3ede-4419-b8c6-546b9903f2cc.png",
@@ -67742,51 +67763,6 @@
       ]
     },
     {
-      "Route": "frontend/img/favicon.3phh9q1n01.ico",
-      "AssetFile": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\frontend\\img\\favicon.ico",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1150"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"15RyUIpWjGoITJNtIo7ZosEdOJApXV+s+RbZD9D8Kxo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 12 Mar 2020 11:13:58 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3phh9q1n01"
-        },
-        {
-          "Name": "label",
-          "Value": "frontend/img/favicon.ico"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-15RyUIpWjGoITJNtIo7ZosEdOJApXV+s+RbZD9D8Kxo="
-        }
-      ]
-    },
-    {
       "Route": "frontend/img/favicon.ico",
       "AssetFile": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\frontend\\img\\favicon.ico",
       "Selectors": [],
@@ -67797,7 +67773,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1150"
+          "Value": "256440"
         },
         {
           "Name": "Content-Type",
@@ -67805,11 +67781,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"15RyUIpWjGoITJNtIo7ZosEdOJApXV+s+RbZD9D8Kxo=\""
+          "Value": "\"QkBy7QBvQCVD/BOVDhbOoj+ILabIMQSqrgZE9tk0s98=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Mar 2020 11:13:58 GMT"
+          "Value": "Mon, 13 Jan 2025 05:11:12 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -67819,7 +67795,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-15RyUIpWjGoITJNtIo7ZosEdOJApXV+s+RbZD9D8Kxo="
+          "Value": "sha256-QkBy7QBvQCVD/BOVDhbOoj+ILabIMQSqrgZE9tk0s98="
+        }
+      ]
+    },
+    {
+      "Route": "frontend/img/favicon.y84ra22daa.ico",
+      "AssetFile": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\frontend\\img\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "256440"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"QkBy7QBvQCVD/BOVDhbOoj+ILabIMQSqrgZE9tk0s98=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 13 Jan 2025 05:11:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "y84ra22daa"
+        },
+        {
+          "Name": "label",
+          "Value": "frontend/img/favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-QkBy7QBvQCVD/BOVDhbOoj+ILabIMQSqrgZE9tk0s98="
         }
       ]
     },
@@ -84790,6 +84811,88 @@
         {
           "Name": "label",
           "Value": "images/Survey/Surveys (4)_5681eaf0-842b-4b17-8526-efac4e81af26.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-71RpCeI0Zc3lRncWZSTBzZScrWTKbwWSA7hUqBI6zo4="
+        }
+      ]
+    },
+    {
+      "Route": "images/Survey/Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png",
+      "AssetFile": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\images\\Survey\\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77175"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"71RpCeI0Zc3lRncWZSTBzZScrWTKbwWSA7hUqBI6zo4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Jan 2025 12:51:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-71RpCeI0Zc3lRncWZSTBzZScrWTKbwWSA7hUqBI6zo4="
+        }
+      ]
+    },
+    {
+      "Route": "images/Survey/Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.tt2ndc2h5h.png",
+      "AssetFile": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\wwwroot\\images\\Survey\\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "77175"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"71RpCeI0Zc3lRncWZSTBzZScrWTKbwWSA7hUqBI6zo4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 12 Jan 2025 12:51:23 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tt2ndc2h5h"
+        },
+        {
+          "Name": "label",
+          "Value": "images/Survey/Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png"
         },
         {
           "Name": "integrity",

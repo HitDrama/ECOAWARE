@@ -10236,8 +10236,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>3phh9q1n01</Fingerprint>
-      <Integrity>15RyUIpWjGoITJNtIo7ZosEdOJApXV+s+RbZD9D8Kxo=</Integrity>
+      <Fingerprint>y84ra22daa</Fingerprint>
+      <Integrity>QkBy7QBvQCVD/BOVDhbOoj+ILabIMQSqrgZE9tk0s98=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\frontend\img\favicon.ico'))</OriginalItemSpec>
@@ -13967,6 +13967,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Survey\Surveys (4)_5681eaf0-842b-4b17-8526-efac4e81af26.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Survey\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EP1</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EP1</BasePath>
+      <RelativePath>images/Survey/Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tt2ndc2h5h</Fingerprint>
+      <Integrity>71RpCeI0Zc3lRncWZSTBzZScrWTKbwWSA7hUqBI6zo4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Survey\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Survey\Surveys (6)_eba5561a-3ede-4419-b8c6-546b9903f2cc.png'))">
       <SourceType>Package</SourceType>

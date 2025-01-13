@@ -197,5 +197,11 @@ namespace EP1.Controllers
             }
             return View("Profile", model);
         }
-    }
+
+		[HttpGet("/access-denied")]
+		public IActionResult AccessDenied()
+		{
+			return View();
+		}
+	}
 }

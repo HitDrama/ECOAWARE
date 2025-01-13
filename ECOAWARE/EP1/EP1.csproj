@@ -26,4 +26,11 @@
     <Folder Include="wwwroot\images\Survey\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\frontend\img\favicon.ico">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
