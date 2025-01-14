@@ -9228,6 +9228,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"rod6ftpjz8"},{"Name":"integrity","Value":"sha256-y93zghxfmGN3oGswcnIe5PUHXcZO/TVL6/4PWtZqX1c="},{"Name":"label","Value":"_content/EP1/images/Survey/Be Aware, Be Eco_67425ba5-df6b-42c1-bf82-3cf05994fb3a.png"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"14616"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022y93zghxfmGN3oGswcnIe5PUHXcZO/TVL6/4PWtZqX1c=\u0022"},{"Name":"Last-Modified","Value":"Tue, 07 Jan 2025 09:04:24 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EP1/images/Survey/Be_Aware__Be_Eco-removebg-preview_149b4267-bffd-48b4-abef-422fd73db0e9.eiyvgue4oc.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Survey\Be_Aware__Be_Eco-removebg-preview_149b4267-bffd-48b4-abef-422fd73db0e9.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"eiyvgue4oc"},{"Name":"integrity","Value":"sha256-duhD7qBxCBU4J/3Xez1D21z6Fzuz5WxLpZxHfX0xgMA="},{"Name":"label","Value":"_content/EP1/images/Survey/Be_Aware__Be_Eco-removebg-preview_149b4267-bffd-48b4-abef-422fd73db0e9.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"18109"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022duhD7qBxCBU4J/3Xez1D21z6Fzuz5WxLpZxHfX0xgMA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 14 Jan 2025 01:05:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/EP1/images/Survey/Be_Aware__Be_Eco-removebg-preview_149b4267-bffd-48b4-abef-422fd73db0e9.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Survey\Be_Aware__Be_Eco-removebg-preview_149b4267-bffd-48b4-abef-422fd73db0e9.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-duhD7qBxCBU4J/3Xez1D21z6Fzuz5WxLpZxHfX0xgMA="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"18109"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022duhD7qBxCBU4J/3Xez1D21z6Fzuz5WxLpZxHfX0xgMA=\u0022"},{"Name":"Last-Modified","Value":"Tue, 14 Jan 2025 01:05:03 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/EP1/images/Survey/competition_6d7a88f1-5dfa-4d89-8ccd-f527c0f5106c.4yfsz3fnh7.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\Survey\competition_6d7a88f1-5dfa-4d89-8ccd-f527c0f5106c.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

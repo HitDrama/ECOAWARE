@@ -767,6 +767,7 @@ wwwroot\images\Survey\2024-50_5810ff12-ad7a-4eae-9bad-c6b1da4ad616.gif
 wwwroot\images\Survey\Be Aware, Be Eco_43fe8187-aa96-4cf3-9ab8-bc832d93e4d4.png
 wwwroot\images\Survey\Be Aware, Be Eco_654af511-5777-4ee0-bf33-dfe388e6e50b.png
 wwwroot\images\Survey\Be Aware, Be Eco_67425ba5-df6b-42c1-bf82-3cf05994fb3a.png
+wwwroot\images\Survey\Be_Aware__Be_Eco-removebg-preview_149b4267-bffd-48b4-abef-422fd73db0e9.png
 wwwroot\images\Survey\competition_6d7a88f1-5dfa-4d89-8ccd-f527c0f5106c.png
 wwwroot\images\Survey\completed-task_69966a9c-8eef-474d-b736-5f9983adf7f8.png
 wwwroot\images\Survey\completed-task_6abdffb4-ee1b-4646-83f5-f0dc14c78d00.png

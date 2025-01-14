@@ -1,0 +1,14 @@
+﻿@model List<EP1.ViewModels.AnswerViewModel>
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Frontend.cshtml";
+}
+
+<h1>Submit Answers</h1>
+<p>Please review your answers and try again if necessary.</p>
+
+@foreach (var answer in Model)
+{
+    <p>Question ID: @answer.QuestionId, Answer: @answer.AnswerText</p>
+}
+

@@ -1,34 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\",
+  "WorkspaceRootPath": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject-fptapech-sem3\\ecoaware\\ep1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\controllers\\answercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject-fptapech-sem3\\ecoaware\\ep1\\views\\secure\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\views\\answer\\submitanswers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\views\\answer\\submitanswers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\views\\answer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\views\\answer\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\views\\secure\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\views\\secure\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\controllers\\securecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\controllers\\securecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\areas\\system\\views\\manager\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\faq\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\faq\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\areas\\system\\views\\faq\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\backend.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\backend.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\areas\\system\\views\\backend.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\survey\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject\\eproject-fptapech-sem3\\ecoaware\\ep1\\areas\\system\\views\\survey\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\areas\\system\\views\\survey\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|c:\\users\\windows 10\\desktop\\eproject-fptapech-sem3\\ecoaware\\ep1\\controllers\\securecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4485FEC7-07DE-453C-BF2C-F4361B3E6543}|EP1\\EP1.csproj|solutionrelative:ep1\\controllers\\securecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,10 +67,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SubmitAnswers.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Answer\\SubmitAnswers.cshtml",
+              "RelativeDocumentMoniker": "EP1\\Views\\Answer\\SubmitAnswers.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Answer\\SubmitAnswers.cshtml",
+              "RelativeToolTip": "EP1\\Views\\Answer\\SubmitAnswers.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T01:22:31.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AnswerController.cs",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Controllers\\AnswerController.cs",
+              "RelativeDocumentMoniker": "EP1\\Controllers\\AnswerController.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Controllers\\AnswerController.cs",
+              "RelativeToolTip": "EP1\\Controllers\\AnswerController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAowFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-14T01:19:41.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Answer\\Index.cshtml",
+              "RelativeDocumentMoniker": "EP1\\Views\\Answer\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Answer\\Index.cshtml",
+              "RelativeToolTip": "EP1\\Views\\Answer\\Index.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAcAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-14T01:18:36.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Secure\\AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Secure\\AccessDenied.cshtml",
               "RelativeDocumentMoniker": "EP1\\Views\\Secure\\AccessDenied.cshtml",
-              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Secure\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Views\\Secure\\AccessDenied.cshtml",
               "RelativeToolTip": "EP1\\Views\\Secure\\AccessDenied.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAAAYwEEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -67,36 +118,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "SecureController.cs",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Controllers\\SecureController.cs",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Controllers\\SecureController.cs",
               "RelativeDocumentMoniker": "EP1\\Controllers\\SecureController.cs",
-              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Controllers\\SecureController.cs",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Controllers\\SecureController.cs",
               "RelativeToolTip": "EP1\\Controllers\\SecureController.cs",
               "ViewState": "AgIAAK0AAAAAAAAAAAAAwMcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T05:26:16.546Z"
+              "WhenOpened": "2025-01-13T05:26:16.546Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\appsettings.json",
               "RelativeDocumentMoniker": "EP1\\appsettings.json",
-              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\appsettings.json",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\appsettings.json",
               "RelativeToolTip": "EP1\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-01-12T23:43:01.631Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Survey\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Survey\\Index.cshtml",
               "RelativeDocumentMoniker": "EP1\\Areas\\System\\Views\\Survey\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Survey\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Survey\\Index.cshtml",
               "RelativeToolTip": "EP1\\Areas\\System\\Views\\Survey\\Index.cshtml",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAB0AAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -104,11 +156,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Backend.cshtml",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Backend.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Backend.cshtml",
               "RelativeDocumentMoniker": "EP1\\Areas\\System\\Views\\Backend.cshtml",
-              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Backend.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Backend.cshtml",
               "RelativeToolTip": "EP1\\Areas\\System\\Views\\Backend.cshtml",
               "ViewState": "AgIAACoAAAAAAAAAAAAAABgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -116,11 +168,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\FAQ\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\FAQ\\Index.cshtml",
               "RelativeDocumentMoniker": "EP1\\Areas\\System\\Views\\FAQ\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\FAQ\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\FAQ\\Index.cshtml",
               "RelativeToolTip": "EP1\\Areas\\System\\Views\\FAQ\\Index.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -128,11 +180,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Manager\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Manager\\Index.cshtml",
               "RelativeDocumentMoniker": "EP1\\Areas\\System\\Views\\Manager\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Manager\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Windows 10\\Desktop\\Eproject\\Eproject-FPTApech-Sem3\\ECOAWARE\\EP1\\Areas\\System\\Views\\Manager\\Index.cshtml",
               "RelativeToolTip": "EP1\\Areas\\System\\Views\\Manager\\Index.cshtml",
               "ViewState": "AgIAAO0AAAAAAAAAAAAAAAEBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",

@@ -85,13 +85,6 @@ namespace EP1.Controllers
 				TotalScore = 0
 			};
 
-			if (!ModelState.IsValid)
-			{
-				// Trả về view với thông báo lỗi nếu validation không thành công
-				TempData["ErrorMessage"] = "Please correct the errors and submit again.";
-				return View(answers);
-			}
-
 			_context.SurveySubmissions.Add(submission);
 			await _context.SaveChangesAsync();
 
@@ -103,7 +96,6 @@ namespace EP1.Controllers
 
 				if (question != null)
 				{
-					// Gọi hàm chấm điểm từ GradingHelper
 					var (isCorrect, score) = GradingHelper.GradeAnswer(question, answer.AnswerText);
 
 					var answerEntity = new Answer
@@ -124,9 +116,10 @@ namespace EP1.Controllers
 			submission.TotalScore = totalScore;
 			await _context.SaveChangesAsync();
 
-			TempData["SuccessMessage"] = $"Your work has been recorded.";
+			TempData["SuccessMessage"] = "Your work has been recorded.";
 			return RedirectToAction("Index", "DetailSurvey", new { id = surveyId });
 		}
+
 
 
 
