@@ -1,6 +1,6 @@
 # 🌱 EcoAware – Nâng cao nhận thức, bảo vệ môi trường 🌍  
 
-![EcoAware Banner](images/banner.png)
+![EcoAware Banner](https://raw.githubusercontent.com/yourusername/EcoAware/main/images/banner.png)
 
 ## 📌 Giới thiệu  
 **EcoAware** là một nền tảng giáo dục và khảo sát nhằm nâng cao nhận thức của học sinh, sinh viên về các vấn đề môi trường. Dự án giúp người dùng tiếp cận thông tin khoa học, thực hiện khảo sát và tham gia vào các hoạt động vì môi trường.  
