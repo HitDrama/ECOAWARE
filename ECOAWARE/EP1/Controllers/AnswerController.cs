@@ -85,6 +85,17 @@ namespace EP1.Controllers
 				TotalScore = 0
 			};
 
+			if (!ModelState.IsValid)
+			{
+				var errorMessages = ModelState.Values
+					.SelectMany(v => v.Errors)
+					.Select(e => e.ErrorMessage)
+					.ToList();
+
+				TempData["ErrorMessage"] = string.Join("<br>", errorMessages);
+				return RedirectToAction("Index", "DetailSurvey", new { id = surveyId });
+			}
+
 			_context.SurveySubmissions.Add(submission);
 			await _context.SaveChangesAsync();
 
@@ -96,6 +107,7 @@ namespace EP1.Controllers
 
 				if (question != null)
 				{
+					// Gọi hàm chấm điểm từ GradingHelper
 					var (isCorrect, score) = GradingHelper.GradeAnswer(question, answer.AnswerText);
 
 					var answerEntity = new Answer
@@ -116,7 +128,7 @@ namespace EP1.Controllers
 			submission.TotalScore = totalScore;
 			await _context.SaveChangesAsync();
 
-			TempData["SuccessMessage"] = "Your work has been recorded.";
+			TempData["SuccessMessage"] = $"Your work has been recorded.";
 			return RedirectToAction("Index", "DetailSurvey", new { id = surveyId });
 		}
 

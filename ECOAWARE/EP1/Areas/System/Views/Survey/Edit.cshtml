@@ -41,7 +41,7 @@
                             <div class="mb-3 row">
                                 <label for="StartDate" class="col-sm-2">Start Date</label>
                                 <div class="col-sm-10">
-                                    <input asp-for="StartDate" type="date" class="form-control" />
+                                    <input asp-for="StartDate" type="date" class="form-control" id="StartDate" />
                                     <span asp-validation-for="StartDate" class="text-danger"></span>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@
                             <div class="mb-3 row">
                                 <label for="EndDate" class="col-sm-2">End Date</label>
                                 <div class="col-sm-10">
-                                    <input asp-for="EndDate" type="date" class="form-control" />
+                                    <input asp-for="EndDate" type="date" class="form-control" id="EndDate" />
                                     <span asp-validation-for="EndDate" class="text-danger"></span>
                                 </div>
                             </div>
@@ -106,4 +106,5 @@
         </div>
     </div>
 </div>
+
 

@@ -21,6 +21,7 @@
   <ItemGroup>
     <Folder Include="Areas\System\Data\" />
     <Folder Include="Areas\System\Models\" />
+    <Folder Include="wwwroot\images\Blog\" />
     <Folder Include="wwwroot\images\FAQ\" />
     <Folder Include="wwwroot\images\Banner\" />
     <Folder Include="wwwroot\images\Survey\" />

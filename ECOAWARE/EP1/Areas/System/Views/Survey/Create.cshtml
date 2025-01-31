@@ -40,7 +40,7 @@
                             <div class="mb-3 row">
                                 <label for="StartDate" class="col-sm-2">Start Date</label>
                                 <div class="col-sm-10">
-                                    <input asp-for="StartDate" type="date" class="form-control" />
+                                    <input asp-for="StartDate" type="date" class="form-control" id="StartDate" />
                                     <span asp-validation-for="StartDate" class="text-danger"></span>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@
                             <div class="mb-3 row">
                                 <label for="EndDate" class="col-sm-2">End Date</label>
                                 <div class="col-sm-10">
-                                    <input asp-for="EndDate" type="date" class="form-control" />
+                                    <input asp-for="EndDate" type="date" class="form-control" id="EndDate" />
                                     <span asp-validation-for="EndDate" class="text-danger"></span>
                                 </div>
                             </div>
@@ -99,4 +99,14 @@
         document.querySelector('#Description').value = quill.root.innerHTML;
     };
 </script>
+
+<script>
+    // Set the minimum date for StartDate and EndDate fields
+    document.addEventListener('DOMContentLoaded', function () {
+        const today = new Date().toISOString().split('T')[0]; // Lấy ngày hiện tại dưới dạng YYYY-MM-DD
+        document.querySelector('#StartDate').setAttribute('min', today);
+        document.querySelector('#EndDate').setAttribute('min', today);
+    });
+</script>
+
 

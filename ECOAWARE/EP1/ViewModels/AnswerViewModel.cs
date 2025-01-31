@@ -20,6 +20,6 @@ namespace EP1.ViewModels
 
 		public QuestionType QuestionType { get; set; }  // Loại câu hỏi (Trắc nghiệm hoặc Tự luận)
 
-		public string CorrectAnswer { get; set; }  // Đáp án đúng (chỉ áp dụng cho trắc nghiệm)
+		public string? CorrectAnswer { get; set; }  // Đáp án đúng (chỉ áp dụng cho trắc nghiệm)
 	}
 }

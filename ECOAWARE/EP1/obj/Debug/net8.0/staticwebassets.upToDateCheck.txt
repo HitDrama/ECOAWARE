@@ -708,7 +708,6 @@ wwwroot\frontend\scss\_wecky-new.scss
 wwwroot\frontend\scss\_whats-new.scss
 wwwroot\frontend\scss\_youtube.scss
 wwwroot\frontend\scss\style.scss
-wwwroot\images\anhnhan.jpg
 wwwroot\images\Banner\Blog.png
 wwwroot\images\Banner\FAQ.png
 wwwroot\images\Banner\FAQs (2).png
@@ -734,53 +733,22 @@ wwwroot\images\Banner\Surveys (6).png
 wwwroot\images\Banner\Surveys (7).png
 wwwroot\images\Banner\Surveys (8).png
 wwwroot\images\Banner\Surveys.png
-wwwroot\images\Be Aware, Be Eco.png
-wwwroot\images\Be_Aware__Be_Eco-removebg-preview.png
-wwwroot\images\Blog\FAQs (4)_9b75b697-faeb-4e44-99d1-6bfa6b3b5935.png
-wwwroot\images\Blog\FAQs (5)_0f9c703e-322a-4fc1-ad5b-59583fc933af.png
-wwwroot\images\Blog\FAQs (7)_3e1ffc24-aa7c-41ca-ba21-58f9785c1d0e.png
-wwwroot\images\Blog\FAQs_2574e8f5-6273-4f94-823e-e3f2c2d8b450.png
-wwwroot\images\Blog\giay5_7dd430cd-bdc3-4dbe-9975-4b30f68be2e8.png
-wwwroot\images\Chi.jpg
-wwwroot\images\Duy.jpg
-wwwroot\images\EcoAware.png
-wwwroot\images\Ecoaware-backend.png
-wwwroot\images\EcoAware-removebg-preview.png
-wwwroot\images\FAQ\banner-02_7f60539e-e1d3-40b2-86ef-1626e4c889ce.jpg
-wwwroot\images\FAQ\competition_a28ca800-3699-44cc-be3e-a1e18ed13d3c.png
-wwwroot\images\FAQ\EcoAware_d8203c57-1378-4707-95cd-2778452dae13.png
-wwwroot\images\FAQ\FAQs (2)_f9561f88-71df-4b15-8dc3-d6573b641f5e.png
-wwwroot\images\FAQ\FAQs (3)_3c4565cb-4fdd-4053-ab5a-5eaf5742658f.png
-wwwroot\images\FAQ\FAQs (4)_a17ad3d1-8b04-484c-a0ee-5e65cb67ff8a.png
-wwwroot\images\FAQ\FAQs (5)_96e3eb62-e937-41a3-b864-e4ec67760c9c.png
-wwwroot\images\FAQ\FAQs (6)_11854310-dafc-4d33-9274-c3c242bf74b6.png
-wwwroot\images\FAQ\FAQs (6)_afcde964-ce5f-4c94-862a-92bb0788027b.png
-wwwroot\images\FAQ\FAQs (6)_c9d48d42-6033-4263-8e4f-1f1f9e57da6d.png
-wwwroot\images\FAQ\giay5_619b5654-0dee-4857-adab-6b2854c829e3.png
+wwwroot\images\Blog\FAQs (7)_28d84985-9487-4c82-b6e1-2e1b843415e5.png
+wwwroot\images\FAQ\FAQs (6)_5fe30d4d-a6c5-4206-952b-6dfbede3dec3.png
 wwwroot\images\icon\blog.png
 wwwroot\images\icon\competition.png
 wwwroot\images\icon\completed-task.png
 wwwroot\images\icon\faq.png
 wwwroot\images\icon\graduated.png
 wwwroot\images\icon\teacher.png
-wwwroot\images\Survey\2024-50_5810ff12-ad7a-4eae-9bad-c6b1da4ad616.gif
-wwwroot\images\Survey\Be Aware, Be Eco_43fe8187-aa96-4cf3-9ab8-bc832d93e4d4.png
-wwwroot\images\Survey\Be Aware, Be Eco_654af511-5777-4ee0-bf33-dfe388e6e50b.png
-wwwroot\images\Survey\Be Aware, Be Eco_67425ba5-df6b-42c1-bf82-3cf05994fb3a.png
-wwwroot\images\Survey\Be_Aware__Be_Eco-removebg-preview_149b4267-bffd-48b4-abef-422fd73db0e9.png
-wwwroot\images\Survey\competition_6d7a88f1-5dfa-4d89-8ccd-f527c0f5106c.png
-wwwroot\images\Survey\completed-task_69966a9c-8eef-474d-b736-5f9983adf7f8.png
-wwwroot\images\Survey\completed-task_6abdffb4-ee1b-4646-83f5-f0dc14c78d00.png
-wwwroot\images\Survey\graduated_13aa6456-9a3a-4b94-8b33-8df92413fa0c.png
-wwwroot\images\Survey\Surveys (3)_2fab858e-e957-423b-83f8-9eb85d59151f.png
-wwwroot\images\Survey\Surveys (3)_55658c82-9162-48c2-a16a-8ee927208a68.png
-wwwroot\images\Survey\Surveys (4)_5681eaf0-842b-4b17-8526-efac4e81af26.png
-wwwroot\images\Survey\Surveys (4)_663c297c-04b9-4795-bb6a-0e4063c2ebfe.png
-wwwroot\images\Survey\Surveys (6)_eba5561a-3ede-4419-b8c6-546b9903f2cc.png
-wwwroot\images\Survey\Surveys (6)_f1e8bf6a-e53b-46be-b603-6b98b3982ac0.png
-wwwroot\images\Survey\Surveys (7)_e68ff82c-b046-4227-aa8f-5a1b35794567.png
-wwwroot\images\Survey\Surveys (8)_f95f77fa-0cbf-4e2d-b339-3bd8d98343d5.png
-wwwroot\images\Survey\Surveys_f6722e79-ed81-45d9-b030-619c0f716e8e.png
+wwwroot\images\Survey\graduated_effe04bc-1a1a-4b60-9c45-4666e6c260b0.png
+wwwroot\images\Survey\Surveys (3)_21396a81-17c5-45c0-92e3-afb9bbfb6513.png
+wwwroot\images\Survey\Surveys (4)_33ee0651-bab8-469b-a4f0-5740f73f3a4c.png
+wwwroot\images\Survey\Surveys (4)_901a190a-02b8-4320-93b5-47c254340002.png
+wwwroot\images\Survey\Surveys (4)_aa27b212-10c5-438e-b329-90293851ce7d.png
+wwwroot\images\Survey\Surveys (5)_39dfe1ff-f5ea-4f29-b618-d3887620b4d3.png
+wwwroot\images\Survey\Surveys (8)_74f24c18-f9d4-4833-a1d4-3ab9de749581.png
+wwwroot\images\Survey\Surveys_42c68da7-6504-4d03-a19e-1c0ddc10b6be.png
 wwwroot\login\css\style.css
 wwwroot\login\css\style.css.map
 wwwroot\login\fonts\material-icon\css\material-design-iconic-font.css

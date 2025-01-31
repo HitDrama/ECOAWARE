@@ -43,7 +43,7 @@ namespace EP1.ViewModels
 	
 
 
-		// File upload không bắt buộc
+		
 		public string Img { get; set; } // File upload mới
 		public IFormFile? ImgFile { get; set; } // Đường dẫn ảnh hiện tại
 
