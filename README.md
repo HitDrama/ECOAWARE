@@ -1,9 +1,21 @@
 # 🌱 EcoAware – Nâng cao nhận thức, bảo vệ môi trường 🌍  
-
-![EcoAware Banner](https://raw.githubusercontent.com/yourusername/EcoAware/main/images/banner.png)
-
+<p align="center">
+<img  src="https://github.com/HitDrama/ECOAWARE/blob/master/ECOAWARE/EP1/wwwroot/images/EcoAwareReadme.png" width="800" alt="EcoAware Banner">
+</p>
 ## 📌 Giới thiệu  
-**EcoAware** là một nền tảng giáo dục và khảo sát nhằm nâng cao nhận thức của học sinh, sinh viên về các vấn đề môi trường. Dự án giúp người dùng tiếp cận thông tin khoa học, thực hiện khảo sát và tham gia vào các hoạt động vì môi trường.  
+**EcoAware** là một nền tảng giáo dục và khảo sát nhằm nâng cao nhận thức của học sinh, sinh viên về các vấn đề môi trường. Dự án giúp người dùng tiếp cận thông tin khoa học, thực hiện khảo sát và tham gia vào các hoạt động vì môi trường. 
+
+## Demo
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1_XLmAKaJQ2FKy4vnJ1CVONarsw-SLCuG/view?usp=sharing">
+    <img src="https://github.com/HitDrama/ECOAWARE/blob/master/ECOAWARE/EP1/wwwroot/images/ecoReadme.gif" alt="KaraokeChill Demo GIF">
+  </a>
+</p>
+
+<p align="center">
+  *Nhấn vào GIF để xem video demo đầy đủ hơn!*
+</p>
 
 ## 🎯 Mục tiêu  
 - Truyền tải kiến thức về bảo vệ môi trường một cách dễ hiểu.  
